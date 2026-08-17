@@ -1,55 +1,478 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>D'Fire's World Wide Web of Yesteryear</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>D'Fire's World Wide Web of Yesteryear</title>
+
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #171a20;
+      --panel-soft: #1d2128;
+      --text: #f4f1ea;
+      --muted: #c8c2b8;
+      --gold: #d8a84e;
+      --gold-soft: #f0d59a;
+      --line: rgba(255,255,255,0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, rgba(216,168,78,0.08), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 0 60px;
+    }
+
+    .hero-inner {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--gold-soft);
+      font-size: 0.82rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 1.02;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      color: var(--gold-soft);
+      margin: 24px auto 0;
+      max-width: 760px;
+    }
+
+    .intro {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 28px auto 0;
+      font-size: 1.08rem;
+    }
+
+    .scroll-note {
+      margin-top: 46px;
+      color: #8f949c;
+      font-size: 0.9rem;
+    }
+
+    section {
+      padding: 78px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 18px;
+    }
+
+    .section-lead {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 42px;
+      color: var(--muted);
+    }
+
+    .story-card {
+      max-width: 850px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, var(--panel), var(--panel-soft));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: clamp(26px, 5vw, 48px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.20);
+    }
+
+    .story-card p {
+      margin: 0 0 22px;
+      color: #e6e0d7;
+      font-size: 1.06rem;
+    }
+
+    .story-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      color: var(--gold-soft);
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .timeline-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .timeline-card h3 {
+      margin: 0 0 10px;
+      color: var(--gold-soft);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .timeline-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .under-construction {
+      text-align: center;
+    }
+
+    .construction-box {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 34px;
+      border: 1px dashed rgba(240,213,154,0.55);
+      border-radius: 18px;
+      background: rgba(216,168,78,0.05);
+    }
+
+    .construction-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      margin: 0 0 12px;
+      color: var(--gold-soft);
+    }
+
+    .construction-box p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .portal {
+      text-align: center;
+      padding-bottom: 110px;
+    }
+
+    .portal-copy {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+    }
+
+    .enter-wrap {
+      margin-top: 34px;
+    }
+
+    .enter-button {
+      display: inline-block;
+      padding: 16px 30px;
+      border: 4px ridge #d9d9d9;
+      background:
+        linear-gradient(#2f2f2f, #050505);
+      color: #ffffff;
+      text-decoration: none;
+      font-family: "Times New Roman", serif;
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-shadow: 1px 1px #000;
+      box-shadow: 0 0 0 3px #000;
+    }
+
+    .enter-button:hover {
+      background:
+        linear-gradient(#4a244e, #160818);
+    }
+
+    .enter-caption {
+      margin-top: 16px;
+      color: #8f949c;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      text-align: center;
+      padding: 36px 20px 50px;
+      color: #8f949c;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        min-height: auto;
+        padding-top: 70px;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <h1>D'Fire's World Wide Web of Yesteryear 🔥🦅</h1>
+  <header class="hero">
+    <div class="page hero-inner">
+      <div class="eyebrow">A Digital Memorial & Preservation Project</div>
 
-    <h2>Preserving D'Fire's little slice of the Internet of the early 2000s.</h2>
+      <h1>D'Fire's World Wide Web of Yesteryear</h1>
 
-    <p>
-        Welcome! This site is dedicated to preserving the online world created
-        and loved by D'Fire — my mom — during the early days of the World Wide Web.
-    </p>
+      <div class="subtitle">
+        Preserving one woman's little corner of the Internet of the early 2000s.
+      </div>
 
-    <p>
-        Long before social media became the Internet we know today, people built
-        their own little corners of the web. They made graphics, wrote HTML,
-        joined online communities, signed guestbooks, traded gifts and awards,
-        and formed friendships with people from all over the world.
-    </p>
+      <p class="intro">
+        This site is dedicated to preserving the websites, graphics, writings,
+        friendships, and memories created by D'Fire — my mom — during an era
+        when the World Wide Web felt a little more personal, a little more
+        handmade, and wonderfully strange.
+      </p>
 
-    <p>
-        D'Fire was part of that world. She created websites and graphics, wrote,
-        coded, and became deeply involved with The Site Fights and the Soaring
-        Eagles, where many of those online friendships became very real ones.
-    </p>
+      <div class="scroll-note">Scroll to enter the story ↓</div>
+    </div>
+  </header>
 
-    <p>
-        More than two decades later, pieces of that world still survive — tucked
-        away on old webpages, archived by the Wayback Machine, saved on old
-        computer disks, and remembered by the people who were there.
-    </p>
+  <main>
 
-    <p>
-        This website is my attempt to bring those pieces back together and
-        preserve D'Fire's little corner of the Internet so it doesn't disappear.
-    </p>
+    <section>
+      <div class="page">
+        <h2 class="section-title">Who Was D'Fire?</h2>
 
-    <p>
-        The site is currently under construction as I rediscover and restore
-        her pages, graphics, writings, and memories. ❤️
-    </p>
+        <div class="story-card">
+          <p>
+            D'Fire was the online name used by my mom, Donna, during the late
+            1990s and early 2000s. She was self-taught in HTML, website design,
+            graphics, GIFs, and the wonderfully chaotic art of building a
+            personal homepage from scratch.
+          </p>
 
-    <hr>
+          <p>
+            She created websites for family, friends, hobbies, and even our
+            local fire department. She designed backgrounds, buttons, banners,
+            animated graphics, awards, and page sets — all during a time when
+            creating your own website meant opening an editor, typing HTML,
+            uploading your files, and hoping everything worked.
+          </p>
 
-    <p>
-        <strong>D'Fire's World Wide Web of Yesteryear</strong><br>
-        Preserving the Internet one little piece at a time. 🔥
-    </p>
+          <p>
+            She also became deeply involved in
+            <span class="highlight">The Site Fights</span>, an online website
+            competition and community where people built elaborate personal
+            websites, joined teams, exchanged graphics and gifts, signed
+            guestbooks, cheered one another on, and formed friendships that
+            often became very real relationships beyond the screen.
+          </p>
+
+          <p>
+            Mom became a member of the
+            <span class="highlight">Soaring Eagles</span>, served as Deputy,
+            and eventually became Team Leader. To many people in that community,
+            she was simply D'Fire.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="page">
+        <h2 class="section-title">What Is This Website?</h2>
+
+        <p class="section-lead">
+          This is an attempt to gather the scattered pieces of D'Fire's online
+          life and give them a permanent home again.
+        </p>
+
+        <div class="story-card">
+          <p>
+            More than two decades after many of those original websites
+            disappeared, pieces of them still survive in unexpected places.
+            Some remain in the Wayback Machine. Some survive on the archived
+            pages of old friends and Site Fights teammates. Some exist as
+            broken image links whose filenames still hint at what once lived
+            there.
+          </p>
+
+          <p>
+            And some may still be waiting on old disks that Mom carefully
+            backed up years ago.
+          </p>
+
+          <p>
+            I have been recovering archived pages, screenshots, graphics,
+            writings, Site Fights history, Soaring Eagles pages, awards,
+            Spiritbooks, old HTML, and fragments of websites she created for
+            both herself and our family.
+          </p>
+
+          <p>
+            As those pieces are recovered, they will be preserved here in more
+            than one form: original archived material whenever possible,
+            screenshots showing how the page survived, and carefully restored
+            or reconstructed versions that bring missing pieces back together.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-card">
+            <h3>Original</h3>
+            <p>
+              Files, graphics, HTML, and writings created by D'Fire and
+              preserved exactly as they are found.
+            </p>
+          </div>
+
+          <div class="timeline-card">
+            <h3>Recovered</h3>
+            <p>
+              Pages and artifacts rescued from the Wayback Machine and other
+              surviving corners of the old web.
+            </p>
+          </div>
+
+          <div class="timeline-card">
+            <h3>Restored</h3>
+            <p>
+              Carefully reconstructed pages using original material whenever
+              possible so visitors can experience them again.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="page">
+        <h2 class="section-title">Why Preserve It?</h2>
+
+        <div class="story-card">
+          <p>
+            The early personal web was incredibly temporary. Free website hosts
+            disappeared. Image servers shut down. Guestbooks vanished.
+            Hyperlinks broke. Computers failed. Passwords were forgotten.
+            Entire communities that once felt enormous became difficult to find
+            at all.
+          </p>
+
+          <p>
+            But the people and memories behind those pages were real.
+          </p>
+
+          <p>
+            For my family, these websites contain pieces of my mom's voice,
+            creativity, humor, friendships, interests, and everyday life. They
+            are not simply old webpages. They are family documents and little
+            pieces of digital history.
+          </p>
+
+          <p>
+            This project exists so that those pieces do not quietly disappear
+            again.
+          </p>
+
+          <p>
+            It is also a way to honor the people who shared that strange,
+            wonderful era of the Internet with her — the friends who filled
+            inboxes, signed Spiritbooks, exchanged gifts and graphics, cheered
+            on their teammates, and became part of D'Fire's online family.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="under-construction">
+      <div class="page">
+        <div class="construction-box">
+          <div class="construction-title">
+            🚧 This Page Is Under Construction 🚧
+          </div>
+
+          <p>
+            Which feels wonderfully appropriate. This archive is being built
+            one recovered webpage, graphic, GIF, memory, and piece of HTML at a
+            time. Check back as D'Fire's corner of the web slowly comes back to
+            life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portal">
+      <div class="page">
+        <h2 class="section-title">Step Back Into D'Fire's Internet</h2>
+
+        <p class="portal-copy">
+          Everything above belongs to the modern web. The button below does not.
+          When the recreated archive is ready, clicking it will take you out of
+          this modern site and into D'Fire's World Wide Web as it might have
+          appeared more than twenty years ago.
+        </p>
+
+        <div class="enter-wrap">
+          <a class="enter-button" href="dfire/index.html">
+            ✨ ENTER D'FIRE'S WORLD ✨
+          </a>
+
+          <div class="enter-caption">
+            Best viewed with nostalgia enabled.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    D'Fire's World Wide Web of Yesteryear<br>
+    A family preservation project for the Internet that almost disappeared.
+  </footer>
 
 </body>
 </html>
