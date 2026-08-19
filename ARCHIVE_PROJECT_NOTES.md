@@ -686,3 +686,131 @@ Record its:
 - function or placement if known
 
 This information may later allow the original asset to be located elsewhere or accurately identified among recovered files.
+
+## SOURCE HTML PRESERVATION AND RECOVERY RULES
+
+### Preserve the original page source
+When recovering HTML from Wayback, preserve the actual archived page source whenever possible.
+
+Do NOT use Microsoft Word or another word processor to create archival HTML copies. Word may rewrite the HTML and create additional Office metadata and support folders.
+
+Preferred workflow:
+
+Wayback capture
+→ direct playback frame
+→ View Page Source
+→ copy source into a plain-text editor such as Notepad
+→ save using the exact original filename and extension
+
+Examples:
+memorial.shtml
+bouncys5.shtml
+family.html
+
+Do not change .shtml files to .html or otherwise rename recovered files.
+
+### Wayback wrapper vs. original served source
+The normal Wayback playback page may contain an outer Wayback wrapper with the actual archived page loaded inside an iframe.
+
+Do not preserve the outer Wayback wrapper as the archival page source.
+
+Open the direct playback iframe and use View Page Source on that frame to recover the actual archived response.
+
+### Site Fights server-generated code
+Recovered source may contain code added by The Site Fights hosting system, including:
+
+- CW-ID blocks
+- Ecreations Software code/comments
+- Site Fights community hosting messages
+- ValueClick advertising code
+- other server-generated scripts or advertisements
+
+This material is NOT Wayback injection.
+
+Do not automatically remove it from the archival master. It is evidence of how the page was actually served to visitors and should be preserved until its purpose and historical relationship to the page have been documented.
+
+For restoration copies, decisions about retaining, disabling, replacing, or modernizing this material should be documented separately.
+
+### Preserve broken and obsolete code
+Do not "fix" original HTML in the archival master merely because it is broken, malformed, obsolete, or incompatible with modern browsers.
+
+The archival master preserves the recovered source.
+
+Modern compatibility changes belong only in the restoration copy and should be documented with HTML comments where appropriate.
+
+### Page relationship inspection
+For every recovered personal page, inspect the HTML for additional page relationships before considering that page or section completely recovered.
+
+Look for:
+
+- Next and Previous links
+- numbered continuation pages
+- image-based navigation buttons
+- sibling filenames such as family2.html, gifts2.shtml, etc.
+- JavaScript navigation
+- links hidden in tables or old templates
+- links to related Site Fights, Angelfire, GeoCities, or other external pages
+
+A page that visually appears to be a single page should not be assumed to be standalone until its HTML has been inspected.
+
+### Music and MIDI preservation
+Inspect every recovered page source for music references, including:
+
+- .mid and .midi files
+- BGSOUND
+- EMBED
+- OBJECT
+- JavaScript or VBScript music players
+- external music plugins
+
+Preserve the exact original filename, path, and playback code whenever found.
+
+Example confirmed on memorial.shtml:
+
+midis/amazing_grace_2.mid
+
+The Memorial page used scripts designed to provide MIDI playback compatibility with Internet Explorer and Netscape.
+
+Recovery priority for missing music:
+
+1. Recover the exact original file from Wayback.
+2. Search other archived D'Fire/Site Fights directories for another surviving copy.
+3. Search original hard drives, CD-R/RW, DVD-R/RW, and other recovered personal media.
+4. Only after the original has been thoroughly searched for should a replacement or recreation be considered.
+
+Any recreated or substituted MIDI must be clearly documented as a reconstruction and must never be represented as the recovered original.
+
+### Restoration compatibility
+Original obsolete playback code, scripts, markup, and other historically significant HTML should remain preserved.
+
+Where modern browsers require compatibility changes, add those changes only to the restoration copy.
+
+Whenever practical, modern compatibility code should be identified with HTML comments explaining:
+
+- what was added
+- why it was necessary
+- what original behavior it recreates
+- which original code remains preserved
+
+These compatibility additions should also be discussed on the future Behind the Scenes / restoration documentation page.
+
+### Recovery copies
+If an imperfect recovery copy already exists, such as HTML saved through Microsoft Word, do not delete it until a proper plain-text archival copy has been recovered and safely stored.
+
+Once the correct archival source has been verified and backed up, generated Word HTML and associated *_files folders are not considered authoritative archival masters.
+
+## MEMORIAL PAGE CONFIRMED DETAILS
+
+memorial.shtml states that the site first went online September 13, 2001.
+
+The page says D'Fire began it three days after September 11, 2001.
+
+The Memorial page contains background music code referencing:
+
+midis/amazing_grace_2.mid
+
+The intended music was Amazing Grace.
+
+The page contains separate legacy playback handling for Internet Explorer and Netscape, including Crescendo/BGSOUND/EMBED methods.
+
+This original playback code should be preserved. If modern compatibility code is required in the restoration, it should be added separately and documented rather than replacing the historical code.
