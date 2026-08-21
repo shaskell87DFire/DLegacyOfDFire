@@ -765,6 +765,438 @@ Inspect every recovered page source for music references, including:
 
 Preserve the exact original filename, path, and playback code whenever found.
 
+# Preservation Update - August 20-21, 2026
+
+## MAJOR PRIMARY-SOURCE RECOVERY: D'FIRE'S HARD DRIVE
+
+D'Fire's old external hard drive, which had previously failed to register when connected through its original enclosure, was successfully accessed.
+
+The external enclosure was disassembled and the internal hard drive was removed. The bare drive was then connected using the new powered hard-drive adapter/reader.
+
+The adapter powered successfully, Windows recognized the drive without requiring repair or initialization, and the contents became accessible.
+
+This was a major project breakthrough.
+
+The drive contains approximately 360 GB of data.
+
+A large website-related portion of the drive was copied to a modern backup before restoration work continued.
+
+One major source area examined contained approximately:
+
+- 14 GB of data
+- roughly 118,000 files
+
+Only approximately five files were initially identified as corrupted during scanning, an extremely small number relative to the total file count.
+
+Some additional copying difficulties were caused by Windows path-length limitations rather than file corruption.
+
+IMPORTANT ARCHIVAL RULE:
+
+The recovered hard drive is now a primary archival source.
+
+Whenever possible:
+- do not modify files directly on the original drive
+- do not rename original files merely for convenience
+- preserve original filenames and directory structures
+- perform restoration work from copied working files
+- maintain an additional complete backup of the hard drive
+
+Because approximately 360 GB is already present, a 1 TB backup drive is preferable to a 500 GB device in order to provide comfortable capacity and future working space.
+
+
+## DUPLICATE FILES AND VERSION DIFFERENCES
+
+Duplicate-file conflicts were encountered while copying.
+
+Files with matching dates and sizes may generally be skipped when a verified identical copy already exists.
+
+However, matching filenames must NOT automatically be assumed to represent duplicate content.
+
+Example:
+
+VISUAL~3.ZIP
+
+Backup copy:
+- August 15, 2002
+- 6.10 MB
+
+Hard-drive copy:
+- April 27, 2004
+- 3.11 MB
+
+These appear to be different historical versions and should therefore both be preserved.
+
+
+## MAJOR CHANGE IN RESTORATION STRATEGY
+
+Before recovery of the hard drive, restoration depended heavily on Wayback Machine captures and recovered individual assets.
+
+The hard-drive discovery changes the project substantially.
+
+D'Fire preserved complete local copies of many of her pages, including HTML, graphics, backgrounds, scripts, and other assets.
+
+NEW PRIMARY RESTORATION RULE:
+
+When D'Fire's own surviving local files contain a complete version of a page, that local source becomes the preferred restoration source.
+
+When multiple local versions survive, the most recent complete surviving version should normally be used as the primary restored page, even if an older version is aesthetically preferred.
+
+Older versions remain historically important and may eventually be displayed or documented separately.
+
+Wayback remains extremely valuable for:
+- missing pages
+- earlier versions
+- capture dates
+- historical comparison
+- missing assets
+- pages or resources not preserved on the hard drive
+
+The project is therefore no longer primarily a Wayback reconstruction. It is increasingly a restoration from D'Fire's own surviving website archive, supplemented by Wayback.
+
+
+## RESTORATION ORDER
+
+Current planned restoration order:
+
+1. Restore D'Fire's personal pages linked from her directory/navigation.
+2. Restore Shana's and Caitlyn's sites/pages appearing near the bottom of D'Fire's directory.
+3. Restore D'Fire's holiday pages.
+4. Investigate and restore surviving Site Fights material represented in the middle portion of her directory where source material survives.
+
+This follows D'Fire's own site organization rather than imposing a new modern structure.
+
+
+# FACES OF FIRE / SPIRITFIRE
+
+## ORIGINAL LOCAL SOURCE RECOVERED
+
+A complete surviving local version of D'Fire's SpiritFire / Faces of Fire page was recovered from the hard drive.
+
+This includes the page HTML and its graphics/assets.
+
+The recovered version is the most recent surviving local version currently identified and uses the Comic Sans presentation seen in later versions.
+
+This discovery superseded the previous plan to use the aesthetically preferred 2005 Wayback version as the primary reconstruction.
+
+The later locally recovered version is now the canonical restoration baseline.
+
+
+## FACES OF FIRE RESTORED LIVE
+
+Faces of Fire was prepared for GitHub using D'Fire's recovered HTML and locally recovered graphics.
+
+Live restoration path:
+
+/dfire/faces-of-fire/
+
+The modern museum landing page contains the button:
+
+ENTER D'FIRE'S WORLD
+
+That museum door now points to:
+
+/dfire/faces-of-fire/
+
+This establishes Faces of Fire as the current entrance from the modern museum into D'Fire's restored historical website.
+
+
+## FIREFLY BACKGROUND / GRAPHIC SET
+
+The hard-drive archive contains coordinated Firefly-related graphics.
+
+This provides strong evidence that the previously missing fireflybkgd.gif belonged to a larger matching graphic/background set rather than being an isolated image.
+
+Related Firefly assets should be preserved together whenever possible.
+
+
+# RESTORED LINK POLICY
+
+## GENERAL SITE FIGHTS LINKS
+
+A project-wide routing rule was established for historical links whose destination was TheSiteFights.com.
+
+When an original link points generally to The Site Fights or to obsolete Site Fights infrastructure that is not itself being reconstructed, the modern restoration should redirect that link to:
+
+Page title:
+What Was The Site Fights?
+
+Planned path:
+
+/dfire/what-was-tsf/
+
+This page has not yet been built.
+
+Whenever practical, preserve the original historical URL in an HTML comment adjacent to the replacement link.
+
+
+## IMPORTANT SITE FIGHTS EXCEPTION
+
+Not every sitefights.com URL should be redirected to the general explainer.
+
+If the original Site Fights URL points to one of D'Fire's pages that we are restoring locally, the link should instead point directly to that restored page.
+
+Example:
+
+A historical Site Fights URL for one of D'Fire's personal pages should eventually point to that page's /dfire/... restoration rather than /dfire/what-was-tsf/.
+
+This allows D'Fire's original internal navigation structure to function again.
+
+
+## EAGLES AGAINST BLIND VOTING
+
+Historical Eagles Against Blind Voting / RingSurf navigation is being redirected to a dedicated future explanatory page rather than dead RingSurf infrastructure.
+
+Planned path:
+
+/dfire/eagles-against-blind-voting/
+
+Original historical destinations should be preserved in HTML comments.
+
+This explainer page has not yet been created.
+
+
+# SPIRITBOOKS / GUESTBOOK GIFTS
+
+D'Fire preserved many gifts and graphics received through guestbooks, Spiritbooks, Site Fights participation, and online friendships.
+
+Future restoration plan:
+
+When appropriate, dead historical Spiritbook/guestbook links may point to a museum page displaying the surviving gifts D'Fire received.
+
+These files should be treated as artifacts documenting D'Fire's online community and relationships, not merely as decorative website graphics.
+
+
+# CAITLYN'S WEBSITE
+
+A substantial local backup of Caitlyn's website was discovered on the hard drive.
+
+Surviving directories/material include items associated with:
+
+- Happy Winter
+- 2007 birthday
+- BDAY
+- Birthday Gifts
+- Happy Birthday KatieBug
+- Happy Fall Y'all
+- Katie Bug
+- Katie Bug's Scrapbook
+- KatieBug's Place
+- NEW ADOPTIONS
+- NEW BKGDS
+- School Daze
+- Spring
+
+Additional graphics, adoption material, artist information, and website assets also survive.
+
+This strongly suggests Caitlyn's site can eventually be reconstructed primarily from original local files.
+
+
+# MEMORIAL PAGE
+
+## ORIGINAL MEMORIAL HTML RECOVERED
+
+The Memorial page initially appeared to be missing even though related graphics were present.
+
+After additional searching, the original locally saved Memorial HTML was found.
+
+The recovered file explicitly identifies its historical source as:
+
+http://www.sitefights.com/community/spirit/spiritfire/memorial.shtml
+
+This confirms the recovered file is D'Fire's Memorial page and allows the restoration to use her own locally saved HTML rather than reconstructing the page from Wayback.
+
+The restored destination is:
+
+/dfire/memorial/
+
+The Faces of Fire page is already wired to this destination.
+
+
+## MEMORIAL RESTORATION POLICY
+
+The recovered local HTML is the canonical source for the Memorial restoration.
+
+The restoration preserves as much of D'Fire's original page as practical, including:
+
+- wording
+- spelling
+- layout
+- tables
+- fonts
+- graphics
+- historical scripts
+- CW-ID material
+- early-web markup
+- original MIDI playback code
+
+Modern compatibility changes are documented in preservation comments rather than silently replacing historical behavior.
+
+
+# MEMORIAL MUSIC: AMAZING GRACE
+
+## ORIGINAL MIDI CONFIRMED
+
+D'Fire's recovered Memorial HTML references:
+
+midis/amazing_grace_2.mid
+
+The original MIDI was successfully recovered.
+
+Preserved restoration location:
+
+/dfire/memorial/assets/midis/amazing_grace_2.mid
+
+
+## MIDI PLAYBACK TESTING
+
+The original MIDI was tested using multiple playback methods.
+
+Windows playback sounded correct and matched the expected version.
+
+Importing the MIDI into MuseScore Studio did NOT reproduce it accurately.
+
+Observed MuseScore differences included:
+
+- a somewhat wonky beginning
+- faster-sounding playback
+- an imported tempo displayed around 113 BPM
+
+Because Windows reproduced the MIDI correctly, MuseScore's interpretation was rejected as the basis for the modern preservation copy.
+
+The original MIDI was NOT edited.
+
+
+## MODERN PLAYBACK DERIVATIVE CREATED
+
+Modern Microsoft Edge did successfully locate the restored .mid file, but instead of reproducing D'Fire's original automatic background-music behavior, Edge downloaded the MIDI when the Memorial page opened.
+
+This confirmed that the file path was correct but the original browser playback method was no longer compatible.
+
+A modern MP3 playback derivative was therefore created.
+
+Process:
+
+1. The recovered original amazing_grace_2.mid was played using Windows, which had been confirmed to reproduce it correctly.
+2. Audacity was configured to use Windows WASAPI loopback recording.
+3. The active Realtek audio output was captured directly.
+4. Headphones could be used during capture without affecting the archival process.
+5. The entire MIDI was recorded.
+6. Extra silence caused only by starting and stopping the recording was removed.
+7. The recording was exported as:
+
+amazing_grace_2.mp3
+
+8. The resulting MP3 was played and confirmed to sound correct.
+9. The MP3 was uploaded alongside the untouched original MIDI.
+
+Current files:
+
+/dfire/memorial/assets/midis/amazing_grace_2.mid
+/dfire/memorial/assets/midis/amazing_grace_2.mp3
+
+Classification:
+
+amazing_grace_2.mid
+= recovered original historical artifact
+
+amazing_grace_2.mp3
+= 2026 browser-compatibility derivative created from playback of the recovered original
+
+
+## MEMORIAL MUSIC HTML CHANGE
+
+D'Fire's historical playback code and original PlaySong reference are preserved in the restoration source for documentation.
+
+However, the active call that caused Edge to download the MIDI was disabled.
+
+The modern page uses HTML5 audio to play:
+
+assets/midis/amazing_grace_2.mp3
+
+The compatibility implementation:
+
+- attempts automatic playback when Memorial opens
+- loops Amazing Grace
+- provides a Play Amazing Grace button
+- provides a Stop button
+- leaves the recovered MIDI unchanged
+- documents the reason for the change and how the derivative was created
+
+
+## MODERN AUTOPLAY SUCCESSFULLY CONFIRMED
+
+On August 21, 2026, the updated Memorial page was tested in Microsoft Edge.
+
+RESULT:
+
+Amazing Grace successfully autoplayed when the Memorial page was entered.
+
+The browser did NOT download the MIDI.
+
+This confirms that the modern compatibility implementation successfully recreates D'Fire's intended automatic background-music behavior in the tested modern browser.
+
+This is now a proven restoration technique that may be reused for other MIDI-equipped pages.
+
+
+# MIDI COLLECTION
+
+Approximately 26 MIDI files have now been recovered/collected during archive research.
+
+Many were apparently automatically downloaded to the phone while visiting Wayback captures of old pages containing MIDI music.
+
+Do not delete these files, including apparent duplicates, until they have been compared.
+
+Potential future MIDI inventory fields:
+
+- original filename
+- file size
+- page that referenced it
+- hard-drive source / Wayback source / other recovery source
+- whether another copy exists
+- whether copies are identical
+- whether Windows reproduces it correctly
+- whether a modern playback derivative has been created
+
+
+# GENERAL MIDI / AUDIO PRESERVATION RULE
+
+For future restored pages containing MIDI:
+
+1. Preserve the original .mid unchanged.
+2. Keep its original filename whenever possible.
+3. Identify which historical page referenced it.
+4. Test the MIDI before creating any modern derivative.
+5. Do not assume MuseScore or another modern renderer reproduces the original MIDI accurately.
+6. When Windows or another historically appropriate synthesizer reproduces it correctly, that playback may be captured for compatibility purposes.
+7. Modern MP3/audio versions are derivatives, never replacements for the original MIDI.
+8. Store original and derivative together where practical.
+9. Document exactly how the derivative was produced.
+10. Preserve D'Fire's original playback code in comments/source whenever modern compatibility code replaces its active function.
+11. Attempt to recreate the original visitor experience, including autoplay and looping where historically appropriate.
+12. Provide manual playback controls as a fallback for browsers that block audible autoplay.
+
+
+# CURRENT RESTORATION STATUS
+
+Faces of Fire / SpiritFire:
+- original local HTML recovered
+- original/local graphics recovered
+- restored on GitHub
+- live
+- linked from modern museum entrance
+
+Memorial:
+- original local HTML recovered
+- original/local graphics recovered
+- restored on GitHub
+- linked from Faces of Fire
+- original Amazing Grace MIDI preserved
+- modern MP3 derivative created
+- modern playback implemented
+- AUTOPLAY SUCCESSFULLY CONFIRMED IN EDGE
+
+The project has now demonstrated that D'Fire's recovered local HTML, graphics, and music can be restored together while retaining the original historical artifacts and documenting only the compatibility changes necessary for modern browsers.
+
 Example confirmed on memorial.shtml:
 
 midis/amazing_grace_2.mid
@@ -814,3 +1246,15 @@ The intended music was Amazing Grace.
 The page contains separate legacy playback handling for Internet Explorer and Netscape, including Crescendo/BGSOUND/EMBED methods.
 
 This original playback code should be preserved. If modern compatibility code is required in the restoration, it should be added separately and documented rather than replacing the historical code.
+
+## ANGELFIRE / GEOCITIES RESTORATION LINK RULE
+
+When D'Fire's restored pages contain historical links to her own Angelfire, GeoCities, or other personal-hosting pages, do not leave the visitor pointing to a dead or unrelated external service if that material has been recovered or reconstructed within DLegacyOfDFire.com.
+
+Preferred behavior:
+
+1. If the original Angelfire/GeoCities page has been restored locally, link directly to the restored DLegacyOfDFire.com version.
+2. If the page has not yet been restored but is planned, reserve a clean local DLegacy path and route the historical link there once the restoration exists.
+3. Preserve the original historical Angelfire/GeoCities URL in an HTML preservation comment whenever practical.
+4. If the original external page cannot be restored, consider routing the link to a contextual museum/explainer page rather than leaving a dead destination.
+5. Do not silently erase the fact that the page originally lived on Angelfire, GeoCities, or another historical host. Preserve that history in the source and/or public documentation.
