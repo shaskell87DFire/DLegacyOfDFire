@@ -17,13 +17,19 @@ RESTORATION CHANGES
    /dfire/... restoration paths.
 3. General Site Fights links that are not restored D'Fire pages point to:
    /dfire/what-was-tsf/
-4. The original recovered MIDI is served from:
+4. The original recovered MIDI is preserved at:
    assets/midis/amazing_grace_2.mid
-5. D'Fire's legacy IE/Netscape MIDI code is preserved.
-6. A modern Play/Stop control was added because modern browsers no longer
-   support her original MIDI playback methods and often block audible autoplay.
-7. External non-Site-Fights links remain unchanged unless otherwise documented.
-8. Historical wording, spelling, fonts, tables, CW-ID material, scripts, and
+5. A modern playback derivative is served from:
+   assets/midis/amazing_grace_2.mp3
+   This MP3 was created in 2026 by recording the recovered original MIDI as
+   rendered by Windows because that playback matched the original correctly.
+6. D'Fire's legacy IE/Netscape/Crescendo/BGSOUND/EMBED MIDI code is preserved
+   in the source but its automatic PlaySong call is disabled so modern browsers
+   do not download the .mid file when the page opens.
+7. A modern HTML5 audio player attempts autoplay and provides Play/Stop controls
+   because modern browsers may block audible autoplay until user interaction.
+8. External non-Site-Fights links remain unchanged unless otherwise documented.
+9. Historical wording, spelling, fonts, tables, CW-ID material, scripts, and
    overall page structure are otherwise preserved as closely as practical.
 
 ARCHIVAL RULE
@@ -527,30 +533,60 @@ document.write ("<font size=4><font color=#0066ff>Last updated: " + textout + "<
 </SCRIPT>
 <BR><BR><BR>
 
-<!-- PRESERVATION NOTE - 2026: modern playback for recovered original MIDI -->
+<!--
+PRESERVATION NOTE - 2026: MODERN MUSIC COMPATIBILITY
+
+D'Fire's original Memorial page called:
+PlaySong("assets/midis/amazing_grace_2.mid")
+
+That original MIDI remains preserved unchanged at:
+assets/midis/amazing_grace_2.mid
+
+Modern browsers no longer reproduce the original IE/Netscape/Crescendo/BGSOUND/
+EMBED behavior reliably and Edge may download the MIDI instead of playing it.
+
+For modern playback, amazing_grace_2.mp3 was created in 2026 by recording the
+recovered original MIDI as rendered by Windows after confirming that Windows
+playback matched the original correctly. The MP3 is a derivative for browser
+compatibility only and does not replace the archival MIDI.
+
+The HTML5 player below attempts to autoplay and loop the MP3 as D'Fire intended.
+If the browser blocks audible autoplay, visitors can use the Play button.
+-->
+
 <div id="dfire-music-controls" style="text-align:center; margin:18px 0;">
-  <button id="dfire-play-music" type="button">♫ Play Amazing Grace ♫</button>
-  <button id="dfire-stop-music" type="button">Stop</button>
-  <audio id="dfire-audio" preload="none"></audio>
+  <audio id="dfire-audio" preload="auto" loop>
+    <source src="assets/midis/amazing_grace_2.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="dfire-play-music" type="button"
+    style="font-family:'Comic Sans MS',Arial,sans-serif; font-size:16px; padding:8px 14px; cursor:pointer;">
+    ♫ Play Amazing Grace ♫
+  </button>
+
+  <button id="dfire-stop-music" type="button"
+    style="font-family:'Comic Sans MS',Arial,sans-serif; font-size:16px; padding:8px 14px; cursor:pointer; margin-left:6px;">
+    Stop
+  </button>
 </div>
+
 <script>
-/*
-Modern browsers do not natively synthesize MIDI. The original MIDI file remains
-preserved at assets/midis/amazing_grace_2.mid. This restoration intentionally
-does not convert or replace that archival file in-place. A browser-compatible
-audio rendering can later be added as a separate derivative file and referenced
-by #dfire-audio, while retaining the original MIDI and D'Fire's legacy code.
-*/
 (function () {
   const audio = document.getElementById("dfire-audio");
   const play = document.getElementById("dfire-play-music");
   const stop = document.getElementById("dfire-stop-music");
 
-  play.addEventListener("click", function () {
-    if (!audio.src) {
-      alert("The original Amazing Grace MIDI has been preserved. A modern browser playback rendering is still being prepared.");
-      return;
+  function tryAutoplay() {
+    const attempt = audio.play();
+    if (attempt && typeof attempt.catch === "function") {
+      attempt.catch(function () {
+        // Modern browsers may block audible autoplay until the visitor interacts.
+        // The Play button below remains available as the fallback.
+      });
     }
+  }
+
+  play.addEventListener("click", function () {
     audio.play();
   });
 
@@ -558,14 +594,15 @@ by #dfire-audio, while retaining the original MIDI and D'Fire's legacy code.
     audio.pause();
     audio.currentTime = 0;
   });
+
+  window.addEventListener("load", tryAutoplay);
 })();
 </script>
 
-<SCRIPT language=JavaScript>
-<!-- 
+<!--
+ORIGINAL D'FIRE MUSIC CALL - preserved but disabled for modern browsers:
 PlaySong("assets/midis/amazing_grace_2.mid")
-//--> 
-</SCRIPT>
+-->
 </SPAN><!CW-ID="~33333333333333"><BR clear=all><!
 Copyright Ecreations Software Inc.
 All rights reserved
