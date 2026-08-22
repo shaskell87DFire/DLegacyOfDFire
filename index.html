@@ -16,10 +16,12 @@
   <link rel="canonical" href="https://dlegacyofdfire.com/">
 
   <meta property="og:title" content="D'Fire's World Wide Web of Yesteryear">
+
   <meta
     property="og:description"
     content="A digital memorial preserving the writings, graphics, memories, and Internet history of Donna, known online as D'Fire and D'Fire Lady."
   >
+
   <meta property="og:url" content="https://dlegacyofdfire.com/">
   <meta property="og:type" content="website">
 
@@ -342,7 +344,6 @@
       </div>
     </section>
 
-
     <section>
       <div class="page">
 
@@ -424,7 +425,6 @@
       </div>
     </section>
 
-
     <section>
       <div class="page">
 
@@ -469,7 +469,6 @@
       </div>
     </section>
 
-
     <section class="under-construction">
       <div class="page">
 
@@ -488,7 +487,6 @@
         </div>
       </div>
     </section>
-
 
     <section class="portal">
       <div class="page">
@@ -543,129 +541,128 @@
 
         </div>
 
-<!--
-  D'LEGACY MUSEUM VISITOR COUNTER - 2026
+        <!--
+          D'LEGACY MUSEUM VISITOR COUNTER - 2026
 
-  Custom graphical visitor counter created for D'Fire's World Wide Web
-  of Yesteryear.
+          Custom graphical visitor counter created for
+          D'Fire's World Wide Web of Yesteryear.
 
-  Counter digit artwork is hosted locally at:
-  /assets/counter/0.png through /assets/counter/9.png
+          Counter digit artwork is hosted locally at:
+          /assets/counter/0.png through /assets/counter/9.png
 
-  The persistent visitor total is stored separately through the
-  D'Fire counter service. The counter represents visits to the restored
-  DLegacy museum and does NOT represent historical visitor totals from
-  D'Fire's original websites.
--->
+          Unique visitors are determined by the Cloudflare Worker.
 
-<div id="dfire-visitor-counter"
-     style="text-align:center; margin-top:28px;">
+          The visitor's public IP is combined with a private secret
+          and hashed with SHA-256 inside Cloudflare.
 
-  <div style="
-    font-size:14px;
-    color:#d4af63;
-    margin-bottom:7px;
-  ">
-    You are visitor number...
-  </div>
+          Raw IP addresses are NOT stored.
 
-  <div id="counter-digits"
-       style="
-         display:flex;
-         justify-content:center;
-         align-items:center;
-         gap:0;
-       ">
-  </div>
+          The counter represents visitors to the restored DLegacy museum
+          and does NOT represent historical visitor totals from
+          D'Fire's original websites.
+        -->
 
-</div>
+        <div id="dfire-visitor-counter"
+             style="text-align:center; margin-top:28px;">
 
-<script>
-(function () {
+          <div style="
+            font-size:14px;
+            color:#d4af63;
+            margin-bottom:7px;
+          ">
+            You are visitor number...
+          </div>
 
-  const counterURL =
-    "https://dfire-counter.shaskell8722.workers.dev/";
+          <div id="counter-digits"
+               style="
+                 display:flex;
+                 justify-content:center;
+                 align-items:center;
+                 gap:0;
+               ">
+          </div>
 
-  const digitContainer =
-    document.getElementById("counter-digits");
+        </div>
 
-  function displayCounter(number) {
+        <script>
+        (function () {
 
-    const count =
-      String(number).padStart(6, "0");
+          const counterURL =
+            "https://dfire-counter.shaskell8722.workers.dev/";
 
-    digitContainer.innerHTML = "";
+          const digitContainer =
+            document.getElementById("counter-digits");
 
-    for (const digit of count) {
+          function displayCounter(number) {
 
-      const img = document.createElement("img");
+            const count =
+              String(number).padStart(6, "0");
 
-      img.src = "/assets/counter/" + digit + ".png";
-      img.alt = digit;
+            digitContainer.innerHTML = "";
 
-      img.style.display = "block";
-      img.style.height = "40px";
-      img.style.width = "auto";
+            for (const digit of count) {
 
-      digitContainer.appendChild(img);
-    }
-  }
+              const img =
+                document.createElement("img");
 
-  async function loadCounter() {
+              img.src =
+                "/assets/counter/" + digit + ".png";
 
-    /*
-      Count one visit per browser approximately every 30 minutes.
+              img.alt = digit;
 
-      Reloading the page during that period will display the current
-      total without adding another visit.
-    */
+              img.style.display = "block";
+              img.style.height = "40px";
+              img.style.width = "auto";
 
-    const visitKey = "dfireMuseumVisit";
-    const thirtyMinutes = 30 * 60 * 1000;
+              digitContainer.appendChild(img);
+            }
+          }
 
-    const previousVisit =
-      Number(localStorage.getItem(visitKey) || 0);
+          async function loadCounter() {
 
-    const now = Date.now();
+            /*
+              Every page load sends a POST request.
 
-    const isNewVisit =
-      !previousVisit ||
-      (now - previousVisit > thirtyMinutes);
+              The Cloudflare Worker decides whether the
+              visitor has already been counted.
 
-    try {
+              Refreshing the page, changing query strings,
+              clearing browser storage, or using a private
+              browser window does not by itself create
+              another visitor from the same public IP.
+            */
 
-      const response = await fetch(counterURL, {
-        method: isNewVisit ? "POST" : "GET"
-      });
+            try {
 
-      const data = await response.json();
+              const response =
+                await fetch(counterURL, {
+                  method: "POST"
+                });
 
-      displayCounter(data.count);
+              const data =
+                await response.json();
 
-      if (isNewVisit) {
-        localStorage.setItem(visitKey, now.toString());
-      }
+              displayCounter(data.count);
 
-    } catch (error) {
+            } catch (error) {
 
-      console.error(
-        "D'Fire visitor counter could not be loaded:",
-        error
-      );
+              console.error(
+                "D'Fire visitor counter could not be loaded:",
+                error
+              );
 
-    }
-  }
+            }
+          }
 
-  loadCounter();
+          loadCounter();
 
-})();
-</script>
-        
+        })();
+        </script>
+
       </div>
     </section>
 
   </main>
-
 
   <footer>
 
