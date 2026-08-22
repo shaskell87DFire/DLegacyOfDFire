@@ -543,22 +543,124 @@
 
         </div>
 
-        <!--
-          FUTURE MUSEUM VISITOR COUNTER
+<!--
+  D'LEGACY MUSEUM VISITOR COUNTER - 2026
 
-          Add a working, persistent visitor counter here once a reliable
-          period-appropriate counter service is selected.
+  Custom graphical visitor counter created for D'Fire's World Wide Web
+  of Yesteryear.
 
-          Desired placement:
-          BELOW the Guestbook button.
+  Counter digit artwork is hosted locally at:
+  /assets/counter/0.png through /assets/counter/9.png
 
-          Desired style:
-          Gloriously early-2000s, preferably flame themed.
+  The persistent visitor total is stored separately through the
+  D'Fire counter service. The counter represents visits to the restored
+  DLegacy museum and does NOT represent historical visitor totals from
+  D'Fire's original websites.
+-->
 
-          The counter should represent visitors to the restored DLegacy museum,
-          not historical visitor numbers from D'Fire's original websites.
-        -->
+<div id="dfire-visitor-counter"
+     style="text-align:center; margin-top:28px;">
 
+  <div style="
+    font-size:14px;
+    color:#d4af63;
+    margin-bottom:7px;
+  ">
+    You are visitor number...
+  </div>
+
+  <div id="counter-digits"
+       style="
+         display:flex;
+         justify-content:center;
+         align-items:center;
+         gap:0;
+       ">
+  </div>
+
+</div>
+
+<script>
+(function () {
+
+  const counterURL =
+    "https://dfire-counter.shaskell8722.workers.dev/";
+
+  const digitContainer =
+    document.getElementById("counter-digits");
+
+  function displayCounter(number) {
+
+    const count =
+      String(number).padStart(6, "0");
+
+    digitContainer.innerHTML = "";
+
+    for (const digit of count) {
+
+      const img = document.createElement("img");
+
+      img.src = "/assets/counter/" + digit + ".png";
+      img.alt = digit;
+
+      img.style.display = "block";
+      img.style.height = "40px";
+      img.style.width = "auto";
+
+      digitContainer.appendChild(img);
+    }
+  }
+
+  async function loadCounter() {
+
+    /*
+      Count one visit per browser approximately every 30 minutes.
+
+      Reloading the page during that period will display the current
+      total without adding another visit.
+    */
+
+    const visitKey = "dfireMuseumVisit";
+    const thirtyMinutes = 30 * 60 * 1000;
+
+    const previousVisit =
+      Number(localStorage.getItem(visitKey) || 0);
+
+    const now = Date.now();
+
+    const isNewVisit =
+      !previousVisit ||
+      (now - previousVisit > thirtyMinutes);
+
+    try {
+
+      const response = await fetch(counterURL, {
+        method: isNewVisit ? "POST" : "GET"
+      });
+
+      const data = await response.json();
+
+      displayCounter(data.count);
+
+      if (isNewVisit) {
+        localStorage.setItem(visitKey, now.toString());
+      }
+
+    } catch (error) {
+
+      console.error(
+        "D'Fire visitor counter could not be loaded:",
+        error
+      );
+
+    }
+  }
+
+  loadCounter();
+
+})();
+</script>
+        
       </div>
     </section>
 
