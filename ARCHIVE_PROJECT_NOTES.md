@@ -1258,3 +1258,334 @@ Preferred behavior:
 3. Preserve the original historical Angelfire/GeoCities URL in an HTML preservation comment whenever practical.
 4. If the original external page cannot be restored, consider routing the link to a contextual museum/explainer page rather than leaving a dead destination.
 5. Do not silently erase the fact that the page originally lived on Angelfire, GeoCities, or another historical host. Preserve that history in the source and/or public documentation.
+
+## AUGUST 22, 2026 BUILD SESSION
+
+### Museum Entrance Visitor Counter
+
+- Created a Cloudflare Worker named `dfire-counter`.
+- Created a Cloudflare Workers KV namespace named `dfire-counter-data`.
+- Bound the KV namespace to the Worker using the variable name `COUNTER`.
+- Counter key used by the Worker: `museum-door-visitors`.
+- Worker successfully tested and returned persistent counts.
+- Counter was reset to `0` after testing.
+- Museum entrance page now contains a functional retro-styled visitor counter beneath the guestbook button.
+- Counter displays in a custom early-web graphic style rather than as plain text.
+- Counter behavior was confirmed to persist across refreshes.
+- Separate browser/private sessions count as separate visitors.
+- First real displayed visitors became user #1 and Ari/test browser #2.
+- Cloudflare Access was not enabled because the counter endpoint needs to remain publicly reachable by visitors to the site.
+
+### Museum Entrance Page
+
+- Finished the transition area leading from the modern memorial site into D'Fire's restored web.
+- Current entrance includes:
+  - "Step Back Into D'Fire's Internet"
+  - large retro `ENTER D'FIRE'S WORLD` button
+  - working guestbook button
+  - working visitor counter
+- Counter and Enter button were deliberately designed with an early-Internet graphic/button feel.
+- Counter represents visitors to the restored DLegacy museum, not historical visitor numbers from D'Fire's original websites.
+
+
+# INTRODUCING FIRE
+
+- Restoration page created at:
+
+  `/dfire/introducing-fire/`
+
+- Local assets are stored under:
+
+  `/dfire/introducing-fire/assets/`
+
+- 22 images were identified/uploaded for the page.
+- A MIDI existed for this page and was recovered.
+- MIDI was converted to MP3 for modern browser compatibility using the same method established for the Memorial page.
+- Original music is therefore preserved, but playback uses the converted MP3.
+- SpiritBook-related links on this page are intended to point to the future SpiritBook gifts/archive page.
+- Navigation was repaired:
+  - Back -> Memorial
+  - Next -> The Big Fitz
+- Old decorative/image links leading into obsolete Site Fights material were removed where they were not useful restoration navigation.
+- Existing restoration rule regarding D'Fire's Angelfire/GeoCities material continues to apply.
+- Initial broken images were caused by the assets being uploaded to the wrong GitHub directory.
+- Assets were subsequently moved to the location expected by the HTML and confirmed working.
+
+
+# THE BIG FITZ / EDMUND FITZGERALD
+
+- Restored D'Fire's Edmund Fitzgerald page.
+- Page title in original HTML: `The Wreck of The Edmund Fitzgerald`.
+- Original page includes information about:
+  - the sinking of the Edmund Fitzgerald
+  - Lake Superior
+  - the Witch of November
+  - the crew
+  - Whitefish Point
+  - other November Great Lakes losses
+- Original MIDI filename identified as:
+
+  `edmund5.mid`
+
+- Music is Gordon Lightfoot's "The Wreck of the Edmund Fitzgerald."
+- Original MIDI was available locally and converted to:
+
+  `edmund5.mp3`
+
+  for modern browser playback.
+- Music autoplay was successfully confirmed on the restored page.
+- Original Shipwreck Museum URL was obsolete:
+
+  `http://www.shipwreckmuseum.com/edmundindex.html`
+
+- It was updated to the current Edmund Fitzgerald page at the Great Lakes Shipwreck Historical Society:
+
+  `https://shipwreckmuseum.com/edmund-fitzgerald/`
+
+- A large Back button was added at the bottom because the recovered original page did not contain one.
+- Back button links to the Memorial page and uses colors/font styling compatible with the original page.
+- There were several difficulties generating the complete HTML because the long page repeatedly appeared truncated.
+- The original HTML was resupplied and the final complete restoration was eventually produced.
+- Page successfully loaded with graphics and autoplaying music after deployment.
+
+
+# MY MICHIGAN
+
+Original historical URL:
+
+`http://www.sitefights.com/community/spirit/spiritfire/mich.shtml`
+
+- Recovered page title: `~Fires Michigan!`
+- Restored under:
+
+  `/dfire/my-michigan/`
+
+- Assets stored under:
+
+  `/dfire/my-michigan/assets/`
+
+- 36 local graphics/background assets were identified.
+- Images were initially uploaded beside `index.html` instead of inside `assets/`, causing broken graphics.
+- They were moved to the correct directory and fixed.
+
+### Updated External Links
+
+The following obsolete URLs were deliberately updated to current descendants:
+
+- MSU Spartans old FansOnly URL -> current MSU Spartans site:
+  `https://msuspartans.com/`
+
+- CMU Chippewas FansOnly URL -> current CMU football site:
+  `https://cmuchippewas.com/sports/football`
+
+- Henry Ford Museum old URL -> current The Henry Ford site:
+  `https://www.thehenryford.org/`
+
+- Old Michigan travel URL -> current Michigan travel guide:
+  `https://www.michigan.org/travel-guide`
+
+- `midnr.com` -> current Michigan DNR site:
+  `https://www.michigan.gov/dnr`
+
+### Dead Links Removed
+
+Dead links were deliberately removed while preserving their visible content/graphics:
+
+- Michigan Campgrounds
+- Everything Michigan
+- `jack-o-lantern.com` pumpkin link
+
+- Pumpkin graphic itself remains on the page. Only its dead hyperlink was removed.
+- All other links that were confirmed still functional were retained.
+
+### My Michigan Music
+
+- A MIDI named:
+
+  `michigan.mid`
+
+  was referenced by another version/source of the page.
+- Wayback was checked for the MIDI, but the file could not be recovered.
+- Decision: do not substitute another song or MIDI.
+- My Michigan therefore proceeds without music unless the authentic `michigan.mid` is recovered later.
+- Large Back navigation was added to return to Memorial.
+- Restoration notes document modern link changes and missing music.
+
+
+# HOME SWEET HOME
+
+Original historical URL:
+
+`http://www.sitefights.com/community/spirit/spiritfire/homesweethome.html`
+
+- Restored under:
+
+  `/dfire/home-sweet-home/`
+
+- Assets stored under:
+
+  `/dfire/home-sweet-home/assets/`
+
+- 21 local assets identified.
+- Original page explicitly tells visitors:
+
+  "Run your cursor over the pictures to see where we're at!"
+
+- D'Fire stored the actual photograph descriptions in the images' `alt` attributes.
+
+### Modern Hover/Touch Restoration
+
+Modern restoration solution:
+
+- Original `alt` descriptions preserved.
+- Descriptions copied into `title` attributes for reliable desktop hover behavior.
+- Touch compatibility added so phone/tablet visitors can tap photographs to see D'Fire's descriptions.
+- This is documented as a 2026 compatibility enhancement and does not alter D'Fire's wording.
+- Notable original photo descriptions include references to:
+  - the blue spruce
+  - front yard
+  - frog swamp
+  - "Michigan alligators"
+  - "WIDOWMAKER!!"
+  - daffodils/"daffy-dills"
+  - trees involved in a power outage
+
+### Home Sweet Home Music
+
+- No MIDI/music call was found in the recovered local HTML.
+- Decision was made not to invent music.
+- Wayback can still be checked for another version if desired.
+
+
+# FIRE'S FAMILY
+
+Fire's Family is a four-page sequence.
+
+Original files/URLs confirmed as:
+
+- `family.html`
+- `family2.html`
+- `family3.html`
+- `family4.html`
+
+- Page 1 introduces the Fire's Family section and the "Once Upon a Time" theme.
+- Pages 2 through 4 contain D'Fire's family photographs and hover descriptions.
+- Page 3 prominently introduces "My Son!"
+- Page 4 prominently introduces "My Girls!"
+- Page 4 contains photographs of Shana and Caitlyn.
+- Original ALT descriptions include Shana with her fish at age 3, Shana cheerleading in 2002 at age 14, school photographs, eighth-grade graduation photographs, and Caitlyn photographs.
+- Page 4 also contains Caitlyn's preschool graduation photographs and gifts from Aunt Speedy.
+
+### Fire's Family Restoration Structure
+
+All four pages were deliberately grouped into one directory:
+
+`dfire/fires-family/`
+
+Structure:
+
+    dfire/
+    └── fires-family/
+        ├── index.html
+        ├── page-2.html
+        ├── page-3.html
+        ├── page-4.html
+        └── assets/
+
+- 52 unique assets are referenced across the four restored pages.
+- Shared Once Upon a Time graphics only need one copy in the common `assets/` folder.
+- All four HTML files and assets were uploaded to GitHub on August 22, 2026.
+
+### Fire's Family Navigation
+
+Original graphical navigation was retained:
+
+Page 1 -> Page 2 -> Page 3 -> Page 4
+
+with corresponding Back navigation.
+
+- Original `onceuponatimenext.jpg` and `onceuponatimeback.jpg` graphics remain the navigation controls.
+- Page 4 correctly ends the sequence with only Back navigation to Page 3.
+
+### Fire's Family Photo Hover Behavior
+
+- Original ALT descriptions are preserved.
+- As with Home Sweet Home, modern compatibility was added so:
+  - desktop users can hover over family photographs
+  - touch-device users can tap them
+- The displayed wording comes directly from D'Fire's original ALT text.
+
+### Removed External Links
+
+Per restoration policy, decorative graphics were retained while obsolete/unnecessary external hyperlinks were removed.
+
+This includes:
+
+- Other Realms award destination
+- Hoddinott graphic-credit link
+- Moon and Back Graphics link
+- Page 4 Site Fights link attached to Caitlyn's `kaitlyn_cert06.gif`
+
+- The certificate graphic itself remains.
+- In the original Page 4 HTML it linked to an old Site Fights `maybear.html` page.
+- Obsolete Site Fights "Join" registration links were also removed while preserving the historical visible text.
+
+### Known Fire's Family Cleanup Issue
+
+After deployment of Fire's Family Page 1, stray cyan question marks (`?`) were visible between decorative elements.
+
+- These are literal `?` characters present in the recovered/saved HTML, not missing-image indicators.
+- Similar stray question marks occur elsewhere in the saved family HTML between adjacent images.
+- They are likely browser-save/conversion artifacts rather than intentional design.
+- FUTURE CLEANUP TASK: Remove stray standalone `?` characters from all four restored Fire's Family HTML files without altering meaningful punctuation or D'Fire's original written content.
+- This cleanup has NOT yet been performed on the deployed copies.
+
+### Fire's Family Music
+
+- No MIDI/music calls were identified in the four recovered Fire's Family source files during this build session.
+- No replacement music was added.
+- Wayback can be checked later if there is reason to suspect an earlier archived version contained music.
+
+
+# RESTORATION RULES REINFORCED AUGUST 22, 2026
+
+1. AUTHENTIC MUSIC ONLY
+   - If an original MIDI can be recovered, preserve the original filename in the archive documentation and convert the MIDI to MP3 for modern browser compatibility.
+   - If the authentic file cannot be recovered, do not substitute unrelated music.
+
+2. HOVER TEXT IS HISTORICAL CONTENT
+   - ALT descriptions embedded by D'Fire should be preserved.
+   - Make them usable on modern desktop and touch devices without changing D'Fire's wording.
+
+3. DEAD DECORATIVE LINKS
+   - Dead or obsolete decorative hyperlinks can be removed without removing the original graphics.
+
+4. WORKING EXTERNAL LINKS
+   - Working external links generally remain working external links.
+   - Obsolete URLs may be updated when there is a clear current successor.
+
+5. D'FIRE-OWNED ANGELFIRE/GEOCITIES MATERIAL
+   - D'Fire-owned Angelfire and GeoCities material is treated as part of the restoration project rather than casually linking visitors to broken historical hosting.
+   - These pages should use their planned/restored DLegacy destinations when applicable.
+
+6. ORIGINAL NAVIGATION GRAPHICS
+   - Original Back/Next graphics should remain navigation whenever available.
+   - Modern DLegacy routes can be placed behind the original artwork.
+
+7. BROWSER-SAVE ARTIFACTS
+   - Browser-save artifacts such as stray standalone `?` characters may be cleaned up.
+   - Cleanup should be documented.
+   - Cleanup must not alter D'Fire's actual written content.
+
+8. ARCHIVAL MASTERS
+   - Keep original recovered source files untouched as archival masters.
+   - GitHub restoration copies may contain documented compatibility and navigation changes.
+
+
+# NEXT SESSION
+
+FIRST TASK:
+Clean the mystery stray `?` characters out of all four Fire's Family pages.
+
+After that:
+Continue to the next D'Fire page in the original directory/restoration sequence.
