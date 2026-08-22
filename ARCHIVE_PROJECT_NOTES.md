@@ -1589,3 +1589,248 @@ Clean the mystery stray `?` characters out of all four Fire's Family pages.
 
 After that:
 Continue to the next D'Fire page in the original directory/restoration sequence.
+
+
+## RESTORATION PROGRESS - AUGUST 22, 2026
+
+### GENERAL RESTORATION / WORKFLOW DECISIONS
+
+- D'Fire's recovered local HTML files remain the archival masters and should NOT be edited.
+- Shana is creating separate working copies of recovered files for restoration work. She is adding `-1` to working-copy filenames on her computer so there is no risk of accidentally overwriting D'Fire's originals.
+- GitHub restoration pages continue to use clean directory URLs with `index.html`, for example:
+  - `/dfire/gifts/`
+  - `/dfire/gifts-2/`
+  - `/dfire/gifts-3/`
+  - `/dfire/gifts-4/`
+- Each restored page stores its page-specific images in an `assets/` subdirectory.
+- Empty GitHub asset directories are initially created with `assets/.gitkeep`.
+- Original filenames are preserved whenever practical.
+- When a recovered browser-saved HTML file references a companion folder such as `SpiritFire's Gifts page 4_files/`, restoration HTML changes those references to `assets/`.
+- D'Fire's untouched recovered source should always be retained separately from the reconstructed GitHub version.
+
+### MIDI / MUSIC RESTORATION RULE
+
+- Pages are checked individually for original MIDI/music code.
+- Music is NOT added when there is no evidence that the original page contained music.
+- Gifts pages 1, 2, 3, and 4 contain no recovered MIDI/music call and therefore remain without music.
+- For pages where original MIDI/music is confirmed, the restoration should preserve/autoplay it as faithfully as modern browser behavior allows.
+- A previously identified modern compatibility rule remains important: pages with autoplay music may require a user-interaction fallback because modern browsers can block autoplay.
+
+---
+
+## GIFTS SECTION
+
+The complete four-page Gifts series has now been reconstructed.
+
+Original pages:
+
+1. Gifts
+   Original:
+   `http://www.sitefights.com/community/spirit/spiritfire/gifts.shtml`
+   Restored:
+   `/dfire/gifts/`
+
+2. Gifts 2
+   Original:
+   `http://www.sitefights.com/community/spirit/spiritfire/gifts2.shtml`
+   Restored:
+   `/dfire/gifts-2/`
+
+3. Gifts 3
+   Original:
+   `http://www.sitefights.com/community/spirit/spiritfire/gifts3.shtml`
+   Restored:
+   `/dfire/gifts-3/`
+
+4. Gifts 4
+   Original:
+   `http://www.sitefights.com/community/spirit/spiritfire/gifts4.shtml`
+   Restored:
+   `/dfire/gifts-4/`
+
+### Gifts 1
+
+- Reconstructed from D'Fire's recovered local copy of `gifts.shtml`.
+- Original title: `SpiritFire's Gifts`.
+- Uses the forest-green Donna background set.
+- No MIDI/music call was present in the recovered source.
+- The original page contained an old Java "Friendship Flower" applet.
+- The applet referenced an externally hosted image:
+  `http://members.tripodnet.nl/AnitaDesign/friendshipflower.jpg`
+- The Friendship Flower image/app assets were NOT present in D'Fire's local backup and could not be recovered from the evidence available during reconstruction.
+- Because modern browsers also no longer support the original Java applet, no fake replacement was created.
+- The restoration contains a preservation notice in place of the unrecoverable Friendship Flower feature.
+- The original surrounding Friendship Flower wording was preserved where possible.
+- Internal Site Fights links were redirected to reconstructed DLegacy pages.
+- Obsolete Site Fights registration/navigation was removed or neutralized where appropriate.
+- The large Next button was restored to lead into the Gifts series rather than back to an unrelated personal page.
+
+### Gifts 2
+
+- Reconstructed from D'Fire's recovered local copy of `gifts2.shtml`.
+- Original title: `SpiritFire's Gifts page 2`.
+- Uses the same forest-green Donna background set.
+- No MIDI/music call was present.
+- Original Back navigation leads to Gifts 1.
+- Original Next navigation leads to Gifts 3.
+- A historical directory inconsistency was found:
+  - Gifts 2 listed Gifts, Gifts 2, and Gifts 3.
+  - It did NOT list Gifts 4 even though Gifts 4 is confirmed to exist.
+- The restored Gifts 2 directory was therefore updated to include Gifts 4.
+- Another historical inconsistency was found in Gifts 3 references:
+  - one location used `gifts3.html`
+  - another used `gifts3.shtml`
+- Both are normalized in the restoration to:
+  `/dfire/gifts-3/`
+- Decorative dead Site Fights hyperlinks attached to gift graphics were removed while preserving the graphics.
+- Old `grammahugs/grammahuggs` decorative links around the cookie certificate were also removed while preserving the graphic.
+- The initially used `forestgreen_NEXT.gif` displayed poorly in the modern restoration.
+- Shana has a cleaner copy named:
+  `forestgreen_next.gif`
+- RESTORATION RULE:
+  Whenever `forestgreen_NEXT.gif` is encountered for this button set, use the cleaner `forestgreen_next.gif` copy in the reconstructed page.
+- Gifts 2 HTML was updated to use `forestgreen_next.gif`.
+
+### Gifts 3
+
+- Reconstructed from D'Fire's recovered local copy of `gifts3.shtml`.
+- Original title: `SpiritFire's Gifts page3`.
+- Uses the forest-green Donna background set.
+- No MIDI/music call was present.
+- Gifts 3's original Next button explicitly links to:
+  `gifts4.shtml`
+- This provides direct primary-source confirmation that Gifts 4 was part of the Gifts sequence.
+- Gifts 3's original directory also omitted Gifts 4 despite its own Next button linking directly to Gifts 4.
+- The reconstructed directory was updated to include Gifts 4.
+- Restored Back navigation:
+  `/dfire/gifts-2/`
+- Restored Next navigation:
+  `/dfire/gifts-4/`
+- The clean `forestgreen_next.gif` is used for the Next graphic.
+
+### Gifts 4
+
+- Reconstructed from D'Fire's recovered local copy of `gifts4.shtml`.
+- Original URL:
+  `http://www.sitefights.com/community/spirit/spiritfire/gifts4.shtml`
+- Original title:
+  `SpiritFire's Gifts page 4`
+- Uses the same forest-green Donna background set.
+- No MIDI/music call was present.
+- Gifts 4 contains the following principal gift graphics:
+  - `wonderfulperson.jpg`
+  - `newyear2006.jpg`
+  - `momsday_eselven.jpg`
+  - `thanks.gif`
+  - `thankulvglitty.gif`
+- `wonderfulperson.jpg` is accompanied by the wording:
+  `From Spirit MiniHeart`
+- Gifts 4's directory explicitly lists:
+  - Gifts
+  - Gifts 2
+  - Gifts 3
+  - Gifts 4
+- This further confirms the complete four-page Gifts series.
+- Gifts 4 contains only a Back button to Gifts 3.
+- There is NO Next button.
+- This confirms Gifts 4 is the end of the recovered Gifts sequence.
+- Restored Back navigation:
+  `/dfire/gifts-3/`
+
+### Gifts Series Restoration Status
+
+COMPLETE:
+- Gifts 1
+- Gifts 2
+- Gifts 3
+- Gifts 4
+
+All four Gifts pages have now been reconstructed for DLegacyOfDFire.
+
+---
+
+## MEMORIAL PAGE - IMAGE CHECK
+
+- A temporary broken-image icon appeared on the Memorial page for:
+  `kg_pray.jpg`
+- The HTML path was confirmed to be correct:
+  `assets/kg_pray.jpg`
+- D'Fire's recovered original `kg_pray.jpg` opened correctly on the local computer.
+- The image subsequently began loading normally on the live site without an HTML change.
+- Conclusion: this appears to have been a temporary browser/GitHub Pages/cache issue rather than a missing or damaged archival asset.
+- No restoration change was required.
+
+---
+
+## FIRE'S FAMILY 4 - SOURCE CONFIRMATION
+
+While preparing Gifts 4, D'Fire's recovered `family4.html` was accidentally opened. This nevertheless provided additional primary-source confirmation about Fire's Family Page 4.
+
+Original URL:
+`http://www.sitefights.com/community/spirit/spiritfire/family4.html`
+
+Original title:
+`Fire's Family 4`
+
+The recovered page is a substantial family-photo page and includes:
+
+- "My Girls!" section.
+- `shanamom.jpg`
+  - ALT text identifies Shana with her "BIG fish" at 3 years old.
+- `shanacheerlead.jpg`
+  - ALT text identifies Shana cheerleading in 2002 at age 14.
+- `shana2002.jpg`
+  - school picture, 2001-2002.
+- `shanagrad1.jpg`
+  - eighth-grade graduation ceremony dated June 4, 2002.
+- `shanakerri.jpg`
+  - Shana and Kerri.
+- `shanaapril.jpg`
+  - April and Shana.
+- `kimshanagrad.jpg`
+  - Kim and Shana.
+- `bunchagrads.jpg`
+  - Kim, Shana, Kerri, and Katie Jo.
+- `witches.jpg`
+  - Caitlyn and Shana, Halloween 2000.
+- Caitlyn childhood photographs including:
+  - `katiejo3.jpg`
+  - `kjo2.jpg`
+- Caitlyn preschool graduation section dated May 16, 2002.
+- Preschool graduation images include:
+  - `graduation6.jpg`
+  - `graduation7.jpg`
+  - `graduation8.jpg`
+  - `graduation13.jpg`
+- A section titled:
+  `Caitlyn's gifts from Aunt Speedy!`
+- Associated gift graphics include:
+  - `caitlyn__4_.gif`
+  - `clappingkitty.gif`
+  - `mini-hkitty.gif`
+  - `caitlynseasterbob.gif`
+  - `kittyanim.gif`
+  - `speedytrike.gif`
+- Another Caitlyn adoption/gift image:
+  - `rmmay_kaitlyn.jpg`
+  - certificate graphic `kaitlyn_cert06.gif`
+- The original Back button on Fire's Family 4 links to:
+  `family3.html`
+- This recovered source should be retained for later reconstruction/checking of the complete Fire's Family sequence.
+
+---
+
+## NEXT MAJOR RESTORATION TARGET
+
+NEXT SESSION:
+
+SHANA'S ORIGINAL WEBPAGE.
+
+The current plan is to move into reconstruction of Shana's own original webpage after completing the current D'Fire personal-page work.
+
+Important approach:
+- Begin from surviving original/local source whenever available.
+- Preserve original HTML, graphics, filenames, wording, and layout as primary evidence.
+- Identify any external/dead components separately.
+- Do not invent replacements for unrecovered historical material without clearly documenting them as reconstructions.
+- Keep Shana's original source untouched and work from a separate `-1` copy.
