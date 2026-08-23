@@ -1834,3 +1834,43 @@ Important approach:
 - Identify any external/dead components separately.
 - Do not invent replacements for unrecovered historical material without clearly documenting them as reconstructions.
 - Keep Shana's original source untouched and work from a separate `-1` copy.
+
+## SPIRITBOOK RESTORATION PLAN
+
+### Shana's Saved Spiritbook
+
+- D'Fire preserved local saved copies of Shana's original Spiritbook pages.
+- At least one confirmed surviving Spiritbook is Shana's Birthday Spiritbook from 2005.
+- The saved material appears to preserve the actual Spiritbook webpage content rather than merely screenshots of the guestbook.
+- Multiple saved Spiritbook pages/captures exist and should be reconstructed as a connected sequence.
+
+RESTORATION PLAN:
+
+- When Shana's original webpage is reconstructed, preserve the original Spiritbook link in its historically appropriate location.
+- When reconstruction reaches Shana's Birthday page, the original Spiritbook link on that page will be redirected to the restored first page of Shana's saved Birthday Spiritbook.
+- The restored Spiritbook will begin with the first surviving saved Spiritbook page.
+- The original Spiritbook-style Next navigation will then be used to connect the surviving saved pages sequentially:
+  - Spiritbook Page 1 -> Page 2
+  - Page 2 -> Page 3
+  - Page 3 -> Page 4
+  - etc., according to the surviving saved copies.
+- Preserve the original Spiritbook appearance, entries, graphics, dates, names, smilies, and navigation as faithfully as the recovered files allow.
+- Do not combine all surviving Spiritbook pages into one modern page if the originals were separate pages. Preserve the page-by-page browsing experience.
+- Any gaps in the surviving sequence should be documented rather than silently reconstructed or invented.
+- D'Fire's untouched locally saved Spiritbook files remain archival masters. Reconstruction should use separate working copies.
+
+### D'Fire's Spiritbook - Research Still Needed
+
+- Search D'Fire's recovered hard drives/backups for locally saved copies of her own Spiritbook pages.
+- The discovery that D'Fire saved Shana's Spiritbook raises the possibility that she may also have saved her own Spiritbook.
+- Search recovered files for likely Spiritbook filenames, companion `_files` directories, HTML/HTM files, guestbook-related filenames, and recognizable Spiritbook graphics.
+- If D'Fire's Spiritbook survives in multiple locally saved pages, reconstruct it using the same page-by-page method planned for Shana's Spiritbook.
+- If only part of D'Fire's Spiritbook survives, preserve exactly what survives and clearly document missing portions.
+
+### Spiritbook Asset Preservation
+
+- D'Fire also saved the individual image/assets associated with Shana's locally saved Spiritbook pages.
+- This should make reconstruction considerably more complete because the restored Spiritbook can use its actual preserved graphics rather than recreated substitutes.
+- When reconstructing each Spiritbook page, first inventory its saved companion assets and preserve the original filenames whenever practical.
+- The surviving saved HTML pages and their associated images should be treated together as the primary source for reconstruction.
+- After each page is restored, connect the surviving saved Spiritbook pages sequentially using the original-style Next/Back navigation.
