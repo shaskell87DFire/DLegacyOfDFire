@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--
+PRESERVATION NOTE - 2026
+
+PRIMARY SOURCE
+This restoration is based on D'Fire's surviving local saved copy of:
+http://www.angelfire.com/mi4/spiritfire/godbless.html
+
+RESTORATION CHANGES
+1. Browser-saved companion paths such as "godbless_files/" were changed to
+   local "assets/" paths for DLegacy hosting.
+2. AngelFire/Lycos advertising, ratings, tracking, and host-injected scripts
+   were removed. They were not part of D'Fire's authored page content.
+3. D'Fire's original Home button now returns to:
+   /dfire/memorial/
+   instead of the former Site Fights URL.
+4. D'Fire's original MIDI remains preserved unchanged at:
+   assets/midis/america.mid
+5. A modern browser-compatible derivative is served from:
+   assets/midis/america.mp3
+   The HTML5 player attempts autoplay and loops. If autoplay is blocked,
+   the visitor's first click/tap anywhere on the page attempts to start it.
+   Visible Play and Stop controls remain available.
+6. The original page embedded a 468x300 Flash presentation:
+   http://www.angelfire.com/mi4/spiritfire/gba/America1.swf
+   The surviving browser save did not recover the SWF; its saved America1.htm
+   file is an AngelFire 404 page, not D'Fire content.
+   A same-size preservation placeholder is used until the original SWF is found.
+7. Historical wording, graphics, layout, colors, and external creator-credit
+   link are otherwise preserved as closely as practical.
+
+ARCHIVAL RULE
+Preserve the untouched recovered HTML separately as the archival master.
+Modern compatibility and navigation changes belong only in this restoration copy.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>God Bless America!</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+</HEAD>
+
+<BODY
+  alink="#0000ff"
+  background="assets/A_Tribute_b.jpg"
+  bgcolor="#000000"
+  link="#000000"
+  text="#ff0000"
+  vlink="#000000">
+
+<BASEFONT size="5">
+
+<DIV align="center">
+
+<BR>
+<BR>
+<BR>
+
+<IMG src="assets/godblessbtn.jpg" alt="God Bless America">
+<BR>
+<IMG src="assets/godblessbar.gif" alt="">
+<BR>
+
+<P align="center">
+
+<!--
+ORIGINAL D'FIRE FLASH EMBED - preserved here for archival reference:
+
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+        codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0"
+        id="America1.swf" height="300" width="468">
+  <param name="movie" value="http://www.angelfire.com/mi4/spiritfire/gba/America1.swf">
+  <param name="quality" value="high">
+  <param name="bgcolor" value="#FFFFFF">
+</object>
+-->
+
+<TABLE width="468" height="300" border="0" cellspacing="0" cellpadding="0"
+       bgcolor="#000000" style="width:468px;height:300px;">
+  <TR>
+    <TD align="center" valign="middle">
+      <FONT face="Arial" color="#FFFFFF" size="3">
+        <B>Original Flash Presentation</B><BR><BR>
+        <I>America1.swf</I><BR><BR>
+        <FONT size="2" color="#FFFFFF">
+          This part of D'Fire's original page<BR>
+          has not yet been recovered.
+        </FONT>
+      </FONT>
+    </TD>
+  </TR>
+</TABLE>
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+<IMG src="assets/s2rwbstarbar.gif" alt="">
+<BR>
+<BR>
+
+<IMG src="assets/unitedsalute.gif" alt="">
+<BR>
+
+<IMG src="assets/91101usaflag.gif" alt="">
+<BR>
+
+<IMG src="assets/suzthankuvets.gif" alt="">
+<BR>
+
+<IMG src="assets/flag4nypdnfd.gif" alt="">
+<IMG src="assets/suzblessamerica.gif" alt="">
+<BR>
+<BR>
+
+<IMG src="assets/2000godbless.gif" alt="">
+<BR>
+
+<IMG src="assets/s2rwbstarbar.gif" alt="">
+<BR>
+<BR>
+
+<IMG src="assets/inmemory.jpg" alt="">
+<BR>
+<BR>
+
+<IMG src="assets/weblattitudes_banner.jpg" alt="">
+<BR>
+<BR>
+
+<A href="/dfire/memorial/">
+  <IMG src="assets/homebtn.jpg" alt="Home" border="0">
+</A>
+
+<BR>
+<BR>
+
+<A href="http://www.snidervillage.com/">
+  <FONT color="blue" size="2">Suzie's Patriotic Graphics</FONT>
+</A>
+
+<BR>
+<BR>
+<BR>
+
+<IMG src="assets/suzcntryflag.gif" alt="">
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+
+<!--
+PRESERVATION NOTE - ORIGINAL MUSIC
+D'Fire's page called:
+PlaySong("http://www.angelfire.com/mi4/spiritfire/gba/america.mid")
+
+The recovered original MIDI is preserved locally as:
+assets/midis/america.mid
+
+The 2026 browser-compatible derivative is:
+assets/midis/america.mp3
+-->
+
+<DIV id="dfire-music-controls" style="text-align:center; margin:18px 0;">
+  <AUDIO id="dfire-audio" preload="auto" loop>
+    <SOURCE src="assets/midis/america.mp3" type="audio/mpeg">
+  </AUDIO>
+
+  <BUTTON id="dfire-play-music" type="button"
+    style="font-family:'Comic Sans MS',Arial,sans-serif; font-size:16px; padding:8px 14px; cursor:pointer;">
+    ♫ Play Music ♫
+  </BUTTON>
+
+  <BUTTON id="dfire-stop-music" type="button"
+    style="font-family:'Comic Sans MS',Arial,sans-serif; font-size:16px; padding:8px 14px; cursor:pointer; margin-left:6px;">
+    Stop
+  </BUTTON>
+</DIV>
+
+<SCRIPT>
+(function () {
+  var audio = document.getElementById("dfire-audio");
+  var play = document.getElementById("dfire-play-music");
+  var stop = document.getElementById("dfire-stop-music");
+  var interactionAttempted = false;
+
+  function tryPlay() {
+    var attempt = audio.play();
+    if (attempt && typeof attempt.catch === "function") {
+      attempt.catch(function () {
+        // Modern browsers may block audible autoplay until visitor interaction.
+      });
+    }
+  }
+
+  function firstInteraction() {
+    if (interactionAttempted) return;
+    interactionAttempted = true;
+    tryPlay();
+
+    document.removeEventListener("click", firstInteraction);
+    document.removeEventListener("touchstart", firstInteraction);
+    document.removeEventListener("keydown", firstInteraction);
+  }
+
+  play.addEventListener("click", function (event) {
+    event.stopPropagation();
+    interactionAttempted = true;
+    audio.play();
+  });
+
+  stop.addEventListener("click", function (event) {
+    event.stopPropagation();
+    interactionAttempted = true;
+    audio.pause();
+    audio.currentTime = 0;
+  });
+
+  window.addEventListener("load", tryPlay);
+
+  document.addEventListener("click", firstInteraction);
+  document.addEventListener("touchstart", firstInteraction, { passive: true });
+  document.addEventListener("keydown", firstInteraction);
+})();
+</SCRIPT>
+
+</P>
+</DIV>
+</BODY>
+</HTML>
