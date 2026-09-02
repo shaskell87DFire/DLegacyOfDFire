@@ -1874,3 +1874,633 @@ RESTORATION PLAN:
 - When reconstructing each Spiritbook page, first inventory its saved companion assets and preserve the original filenames whenever practical.
 - The surviving saved HTML pages and their associated images should be treated together as the primary source for reconstruction.
 - After each page is restored, connect the surviving saved Spiritbook pages sequentially using the original-style Next/Back navigation.
+## AUGUST 29, 2026 — MDOLLZ RESTORATION SPRINT / EAGLE SPIRIT DISCOVERIES
+
+### General Restoration / Navigation Decisions
+
+- All internal restored DLegacy links should open in the SAME browser tab/window. Remove `target="_blank"` from internal navigation.
+- External surviving websites may still open separately where appropriate.
+- Do not invent destinations for historical Back/Next/Home graphics whose recovered source contains no valid hyperlink. Preserve the graphic as non-clickable and document the missing link in a restoration comment.
+- When a missing historical navigation destination can be confidently reconstructed from surviving neighboring pages, only restore it after making an explicit restoration decision and document that it was reconstructed rather than claiming the link survived in the original source.
+- Continue preserving untouched recovered HTML separately as the archival master.
+- Working restorations may remove Site Fights/community hosting wrappers, injected advertising scripts, `noindex` tags, obsolete popup/window scripts, right-click blockers, image-drag blockers, and text-selection blockers.
+- Historical mailto links containing old personal email addresses may be removed from the public restoration while preserving the visible credit/name.
+- Preserve unfinished pages as unfinished. Do not manufacture missing dolls, text, sections, or other content.
+- Preserve source typos, quirky punctuation, strange navigation, and other authentic early-web characteristics unless something is clearly an encoding artifact or a documented compatibility correction.
+- MDollz page-specific graphics normally remain in the shared `/dfire/mdollz/assets/` directory.
+- Snowfest 2004 is an established exception: its two HTML files remain in `/dfire/mdollz/`, while its unique graphics live in `/dfire/mdollz/snowfest_04/assets/`.
+
+---
+
+## MDOLLZ — RESTORED PAGES / FINDINGS
+
+### Main MDollz Page
+
+Historical page:
+`http://www.sitefights.com/community/spirit/mdollz/pg2.html`
+
+Restored as:
+`/dfire/mdollz/index.html`
+
+- Historical page title: `~*~Introducing...ME!~*~`
+- Internal MDollz navigation was converted to same-tab navigation.
+- Old visible wording claiming links/Spiritbook would open in another window was removed/updated because that behavior is no longer used.
+- Spiritbook graphics remain preserved but disabled.
+- Spiritbook owner associated with MDollz: `babydollzbook`.
+- No MIDI found.
+
+### Casual Dollz
+
+Historical filename:
+`pg3.html`
+
+Restored:
+`/dfire/mdollz/pg3.html`
+
+- Title: `~*~Casual Dollz~*~`
+- Back -> `index.html`
+- Next -> `pg4.html`
+- No MIDI found.
+
+### Formal Dollz
+
+Historical filename:
+`pg4.html`
+
+Restored:
+`/dfire/mdollz/pg4.html`
+
+- Title: `~*~Formal Dollz~*~`
+- Back -> `pg3.html`
+- Next -> `pg5.html`
+- No MIDI found.
+
+### Summer Dollz
+
+Historical filename:
+`pg5.html`
+
+Restored:
+`/dfire/mdollz/pg5.html`
+
+- Title: `~*~Summer Dollz~*~`
+- Back -> `pg4.html`
+- Next -> `pg6.html`
+- No MIDI found.
+
+### Couplez Dollz
+
+Historical filename:
+`pg6.html`
+
+Restored:
+`/dfire/mdollz/pg6.html`
+
+- Title: `~*~Couplez Dollz~*~`
+- Surviving page explicitly says:
+  `Sorry This Page is Not Complete`
+- Preserve the unfinished state.
+- Back -> `pg5.html`
+- Next -> `pg7.html`
+- No MIDI found.
+
+### Holiday Dollz / Christmas 2002
+
+Historical filename:
+`pg7.html`
+
+Restored:
+`/dfire/mdollz/pg7.html`
+
+- Historical title: `~*~Christmas 2002~*~`
+- Back -> `pg6.html`
+- Next -> `pg9.html`
+- `holidaymore.jpg` originally linked to `pg7valentines.html`.
+- `pg7valentines.html` has NOT been recovered locally or through Wayback.
+- Restoration decision: display `holidaymore.jpg` without a hyperlink and preserve the original destination in an HTML comment. Do not invent the Valentine page.
+- No MIDI found.
+
+### Friendz Dollz
+
+Historical filename:
+`pg9.html`
+
+Restored:
+`/dfire/mdollz/pg9.html`
+
+- Title: `~*~Friendz Dollz~*~`
+- Surviving content only says:
+  `Sorry This Page is Not Complete Yet!`
+- No dolls survive on the page. Preserve the unfinished state.
+- Back -> `pg7.html`
+- Next -> `pg10.html`
+- Historical Fun Stuff navigation contains an `<IMG>` with an empty `src`. Do not invent a missing button graphic.
+- No MIDI found.
+
+### My Favez
+
+Historical filename:
+`pg10.html`
+
+Restored:
+`/dfire/mdollz/pg10.html`
+
+- Title: `~*~My Favez~*~`
+- Surviving favorites include Eminem, blue dollz, Mountain Dew, and K-Swiss.
+- Original K-Swiss URL is malformed:
+  `http://www.sitefights.com/community/spirit/mdollz/www.kswiss.com`
+- Preserve malformed historical URL in archival/restoration comments rather than silently inventing a corrected destination.
+- `faveznext.jpg` survives but had no hyperlink in recovered source.
+- RESTORATION DECISION: reconstructed the Next destination as `snowfest_04.html`, because Snowfest 2004 is the next surviving/restored MDollz feature.
+- Document this as a reconstruction, not an original surviving link.
+- No MIDI found.
+
+---
+
+## SNOWFEST 2004
+
+Two-page MDollz mini-feature.
+
+Historical pages:
+`/community/spirit/mdollz/snowfest_04.html`
+`/community/spirit/mdollz/snowfest04_pg2.html`
+
+Restored:
+`/dfire/mdollz/snowfest_04.html`
+`/dfire/mdollz/snowfest04_pg2.html`
+
+Directory structure:
+
+dfire/
+└── mdollz/
+    ├── snowfest_04.html
+    ├── snowfest04_pg2.html
+    └── snowfest_04/
+        └── assets/
+
+- Page 1 uses `friends_at_snowfest.jpg` as the clickable entrance to page 2.
+- Surviving text mentions that this was Kimmy's last Snowfest before she moved.
+- Page 2 uses animated `blueheart_bkgd.gif`; preserve the original GIF animation.
+- Snowfest-specific assets remain in `/dfire/mdollz/snowfest_04/assets/`.
+- No MIDI found.
+
+---
+
+## MY PASSION / THEATER SECTION
+
+### My Passion
+
+Historical filename:
+`drama.html`
+
+Restored:
+`/dfire/mdollz/drama.html`
+
+- Title: `~*~My Passion~*~`
+- Documents Shana's interest and participation in theater.
+- Professional productions attended:
+  - 2003 — Les Miserables, Fisher Theater, Detroit
+  - 2005 — Phantom of the Opera, Masonic Temple Theater, Detroit
+- School productions:
+  - Yankee Doodle — Heather — Spring musical 2003
+  - Dark and Stormy Night — Olive — Fall 2003
+  - Wizard of Wonderland — Dorothy — Fall 2004
+  - Cinderella — Stepmother Beulah — Spring musical 2005
+- Birthday 2004 navigation graphic remains visible but inactive because `bday_04.html` has not been recovered.
+- No MIDI found.
+
+### Les Miserables
+
+Historical/restored filename:
+`lesmis.html`
+
+- Background and Playbill graphics survive.
+- `CAST:` and `SYNOPSIS:` headings survive but contain no content.
+- Preserve them empty.
+- Back -> `drama.html`
+- Next -> `phantom.html`
+- Home -> `index.html`
+- No MIDI found.
+
+### Phantom of the Opera
+
+Historical/restored filename:
+`phantom.html`
+
+- Playbill graphics survive.
+- `CAST:` and `SYNOPSIS:` headings survive but contain no content.
+- Back -> `drama.html`
+- Home -> `index.html`
+- No Next link survives.
+- No MIDI found.
+
+### Yankee Doodle
+
+Historical/restored filename:
+`yankee.html`
+
+- Shana played Heather.
+- Cast and photo collage survive.
+- Synopsis heading survives empty.
+- Historical navigation appears backwards by filename:
+  - `yddpb_next.jpg` -> `drama.html`
+  - `yddpb_back.jpg` -> `dark.html`
+- Preserve this mapping because it is what the recovered source actually contains.
+- No MIDI found.
+
+### Dark and Stormy Night
+
+Historical/restored filename:
+`dark.html`
+
+- Shana played Olive.
+- Full cast and surviving synopsis/commentary preserved.
+- Back -> `drama.html`
+- Next -> `wizard.html`
+- Home -> `index.html`
+- No MIDI found.
+
+### Wizard of Wonderland
+
+Historical/restored filename:
+`wizard.html`
+
+- Shana played Dorothy.
+- Surviving photos include production and Dorothy/Alice material.
+- Teenage commentary concerning the ruby shoes/red glitter is preserved.
+- Source typo `Jennt M.` preserved.
+- Synopsis heading survives empty.
+- Back -> `drama.html`
+- Next -> `cinderella.html`
+- Home -> `index.html`
+- No MIDI found.
+
+### Cinderella
+
+Historical/restored filename:
+`cinderella.html`
+
+- Shana played Stepmother Beulah.
+- Cast survives.
+- Synopsis heading survives empty.
+- Back -> `drama.html`
+- Home -> `index.html`
+- No Next link survives.
+- No MIDI found.
+
+---
+
+## SCRAPBOOK
+
+### Scrapbook Entrance
+
+Historical/restored filename:
+`scrapbook.html`
+
+- Title: `Shana's Scrapbook`
+- `notebook.gif` is the clickable entrance to `scrapbook2.html`.
+- Home originally pointed to `pg2.html`; restored to `index.html`.
+- Credit: background by Mom, 2005.
+- No MIDI found.
+
+### Scrapbook Page 2
+
+Historical/restored filename:
+`scrapbook2.html`
+
+- Four surviving photographs:
+  `pic1.jpg`
+  `pic2.jpg`
+  `pic3.jpg`
+  `pic4.jpg`
+- Back -> `scrapbook.html`
+- `scrapbook_more.jpg` -> `scrapbook3.html`
+- `scrapbook_next.jpg` survives but lacked a valid opening hyperlink.
+- RESTORATION DECISION: reconstructed Next -> `scrapbook3.html`, based on the surviving More link and confirmed identity of the following page.
+- Document reconstruction in HTML.
+- No MIDI found.
+
+### Scrapbook Page 3 / Photo Album
+
+Historical URL confirms:
+`/community/spirit/mdollz/scrapbook3.html`
+
+Title:
+`Photo Album`
+
+Restored:
+`/dfire/mdollz/scrapbook3.html`
+
+- This definitively establishes that the surviving Photo Album page is `scrapbook3.html`.
+- Contains Mom's introductory text about Shana growing up and wanting a huge cheetah-print photo album.
+- Multiple childhood/family photographs and captions survive.
+- Preserve source punctuation and family captions.
+- `leaopard_back.gif` originally linked `bday_04.html`; display inactive until Birthday 2004 is recovered.
+- `leaopard_next.gif` survives without a hyperlink; preserve inactive.
+- Preserve historical typo `leaopard_` in filenames.
+- No MIDI found.
+
+---
+
+## MY SIMS
+
+Historical/restored filename:
+`my_sims.html`
+
+- Title: `~*~My Sims~*~`
+- Surviving Sims 2 family histories include:
+  - Burgz family
+  - Reynolds family (1)
+  - Reynolds family (2)
+  - Smith-Jones family
+  - Lothario Manor
+- Mom and Shana created a Sims neighborhood named:
+  `MoSha Valley`
+- MoSha Valley included a shopping center, park, and University.
+- `sims_moresims.jpg` survives but has NO hyperlink in recovered source. Preserve it non-clickable; do not invent another Sims page.
+- Footer credits Sims characters to Shana and Mom.
+- No MIDI found.
+
+---
+
+## COUNTRY TALES SPIRIT — THREE-PAGE SERIES
+
+The recovered source confirms this is a three-page MDollz Site Fights section:
+
+`ctspirit.html`
+`ctspirit2.html`
+`ctspirit3.html`
+
+All restored under:
+`/dfire/mdollz/`
+
+### Country Tales Spirit Page 1
+
+Historical/restored filename:
+`ctspirit.html`
+
+- Contains Country Tales voting/spirit material, gifts, awards, team gifts, and Kalender Kidz.
+- Surviving text says voting began December 5 and allowed one vote per day per ISP/household.
+- Shana explicitly says she did not “blind vote” and would check sites before agreeing to Vote Exchange.
+- Contains multiple welcome/team-spirit gifts.
+- Next -> `ctspirit2.html`.
+- Navigation itself confirms existence of both pages 2 and 3.
+- No MIDI found.
+
+### Country Tales Spirit Page 2
+
+Historical/restored filename:
+`ctspirit2.html`
+
+- Primarily an adoption collection from August/September 2005.
+- Includes gifts/adoptions Shana collected and items her little sister adopted for her.
+- Surviving text says:
+  `Yikes...I'm going to be needing another page for adoptions! :)`
+- Back -> `ctspirit.html`
+- Next -> `ctspirit3.html`
+- Home -> restored MDollz index.
+- No MIDI found.
+
+### Country Tales Spirit Page 3
+
+Historical URL:
+`http://www.sitefights.com/community/spirit/mdollz/ctspirit3.html`
+
+Historical title:
+`M'Dollz Country Tales Spirit Page...pg3`
+
+Restored:
+`/dfire/mdollz/ctspirit3.html`
+
+- Final page of the recovered three-page Country Tales Spirit sequence.
+- Opening text:
+  `WOW! So many gifts, awards, fun stuff!`
+  `thank you so much to everyone who has been making this fun! :)`
+- Contains numerous Country Tales/Site Fights awards and spirit gifts.
+- Preserves a Most Spirited Fighter award and the accompanying letter from D'Rabbitha.
+- The letter explains that the Most Spirited Fighter was selected weekly and says Shana received it because of the spirit she showed throughout The Site Fights.
+- This is useful PRIMARY SOURCE evidence explaining how the Most Spirited Fighter recognition worked.
+- Surviving graphics include:
+  `shining_spirit_award_9_05.jpg`
+  `msf_september.jpg`
+  `shana091605.gif`
+  `spirit10305.gif`
+  `spirit101705.gif`
+  `ctspirit103105.gif`
+  plus additional gifts.
+- Back -> `ctspirit2.html`.
+- `mauve_next.jpg` survives without a valid opening hyperlink. Preserve inactive; do NOT invent a Page 4.
+- Footer credits backgrounds to Mom.
+- No MIDI found.
+
+---
+
+## MDOLLZ — REMAINING PAGES AFTER AUGUST 29 RESTORATION SPRINT
+
+Still to restore/review:
+
+- `ve.html` — Vote Exchange
+- `funstuff.html` — Fun Stuff
+- `holidays.html` — Happy ALL Holidays
+
+Happy ALL Holidays is known to connect to surviving Christmas/Holiday Dollz material and a Halloween page.
+
+Valentine and Thanksgiving areas are represented in the surviving holiday material, but corresponding MDollz content has not currently been recovered. Do not invent these pages.
+
+Birthday 2004:
+`bday_04.html`
+
+- HTML/resources have NOT been recovered.
+- Skip restoration until primary material is found.
+- Existing navigation buttons may remain visible but inactive.
+
+Valentine Dollz:
+`pg7valentines.html`
+
+- Historical destination known from Holiday Dollz.
+- Page/assets currently unrecovered.
+- Do not reconstruct without evidence.
+
+---
+
+# D'FIRE — EAGLE SPIRIT / SOARING EAGLES
+
+## Eagle Spirit Parent Page
+
+PRIMARY SOURCE:
+`http://www.sitefights.com/community/spirit/spiritfire/eagles.shtml`
+
+Historical title:
+`D'Fire's...Eagle Spirit`
+
+Restored location:
+`/dfire/eagle-spirit/index.html`
+
+This page is PRIMARY SOURCE evidence for Donna/D'Fire's Soaring Eagles history.
+
+D'Fire states that:
+
+- She had been a fighter for The Soaring Eagles for approximately a year and a half.
+- She reached The WarZone twice.
+- About one month after joining the team, she joined the Soaring Eagles Crashlanders Cheer Squadron.
+- She later became a Spirit for the Legends.
+- She briefly tried Fairy wings.
+- Her PC then died.
+- When she returned, she became D'Pleasance's Assistant Team Leader for The Eagles.
+- She explicitly dates becoming Assistant Team Leader to NOVEMBER 2001.
+- She explicitly states:
+  `I took over the Team Leader title in February 2002.`
+- She then states:
+  `I am now known as D'Fire!`
+- She identifies the page itself as:
+  `This is my Spirit Page!`
+
+This establishes a primary-source leadership timeline:
+
+November 2001:
+D'Fire became D'Pleasance's Assistant Team Leader for the Soaring Eagles.
+
+February 2002:
+D'Fire took over the Team Leader title.
+
+This corrects/strengthens earlier project knowledge that was based primarily on recollection.
+
+The page contains:
+`formalfire.gif`
+`relaxedfire.gif`
+
+It also links to a historical Soaring Eagle Staff page.
+
+### Eagle Spirit Music
+
+The recovered `eagles.shtml` contains legacy VBScript/JavaScript MIDI playback infrastructure for Internet Explorer and Netscape, including Crescendo/`bgsound` support.
+
+However, the surviving source does NOT contain a usable song invocation/MIDI filename.
+
+Do NOT assign music to this page unless another surviving source identifies the actual file.
+
+### Eagle Spirit Directory
+
+The page contains three major navigation/directory columns:
+
+- My Personal Pages
+- TSF Pages
+- Holiday Pages
+
+These provide primary-source evidence for relationships among many D'Fire pages.
+
+The directory includes links/references to:
+- Memorial
+- Introducing Fire
+- The Big Fitz
+- My Michigan
+- Home Sweet Home
+- Fire's Family
+- Gifts
+- Gifts 2
+- Gifts 3
+- AngelFire site
+- God Bless America
+- Fires Blinkies
+- Birthday Parties 2002-'04
+- Shana's website
+- Spirit World
+- Bouncy World
+- Spirit Charms
+- My Garden
+- Eagle Spirit
+- Legend Spirit
+- SpiritBook
+- Halloween '01
+- Halloween Party '02
+- Thanksgiving '01
+- Thanksgiving '01 p.2
+- Thanksgiving Celebration '02
+- Christmas '01
+- Christmas '01 p.2
+- Christmas 2002
+- Christmas 2003
+- Valentine Gifts
+- Valentine Gifts 2
+- St. Patrick's Gifts
+- Easter Gifts
+- Mother's Day Gifts
+- 4th of July Gifts
+
+The page footer says:
+`Background Set by Donna`
+and dates the set to 2005.
+
+---
+
+## Eagle Spirit — Awards & Stuff
+
+PRIMARY SOURCE:
+`http://www.sitefights.com/community/spirit/spiritfire/eagle_awards.html`
+
+Historical title:
+`D'Fires Soaring Eagles...Awards & Stuff!`
+
+Restored location:
+`/dfire/eagle-spirit/eagle_awards.html`
+
+Directory relationship is CONFIRMED by primary source:
+
+- `eagles.shtml` directly links to `eagle_awards.html` using `eagle_spirit_awardsbtn.jpg`.
+- `eagle_awards.html` links Back to `eagles.shtml`.
+- Therefore Awards & Stuff is a child/subpage of the Eagle Spirit section.
+
+Shared restoration directory:
+
+dfire/
+└── eagle-spirit/
+    ├── index.html
+    ├── eagle_awards.html
+    └── assets/
+
+The Awards & Stuff page contains a large surviving collection of Soaring Eagles team-spirit awards.
+
+Important dated filenames include:
+
+`teamspiriteagles32402.gif`
+`teamspiriteagles7_07.gif`
+`teamspiriteagles10_06_02.gif`
+`teamspiriteagles2_03.gif`
+`teamspiriteagles4_06_03.gif`
+`teamspiriteagles9_07_03.jpg`
+`teamspiriteagles11_23_03.jpg`
+
+Additional Soaring Eagles graphics include:
+
+`charmteamspirit.gif`
+`teamspiritsoaringeagles.gif`
+`spiritteamstarcharm.gif`
+`feature_eagles.jpg`
+`fteam_eagles.jpg`
+
+The page then contains a collection of apparent D'Fire/team-leadership honors:
+
+`augustdfire1.gif`
+`tlofmonth.gif`
+`febdfire.gif`
+`dfiresom.jpg`
+`congrats3.jpg`
+`teamleaderofthemonth.gif`
+
+Visible surviving text associates:
+- `augustdfire1.gif` with `2002`
+- `tlofmonth.gif` with `2003`
+- followed by:
+  `An awesome honor! Third time!! =)`
+
+Do not infer the exact meaning/title/date of every award solely from its filename. Inspect the graphics themselves before documenting individual award meanings.
+
+The page is valuable primary evidence for the Soaring Eagles' award/team-spirit culture and D'Fire's repeated recognition.
+
+Navigation:
+- Back -> restored `/dfire/eagle-spirit/`
+- Home -> restored `/dfire/memorial/`
+- `eagle_spirit_nextbtn.jpg` survives without a valid opening hyperlink.
+- Preserve Next as non-clickable unless another primary source establishes its destination.
+
+This page should be flagged as useful source material for future Site Fights museum/explainer content and social-media history storytelling.
