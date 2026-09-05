@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--
+PRESERVATION NOTE - 2026
+
+SOURCE PAGE TITLE
+Christmas Hope
+
+RESTORATION LOCATION
+/lady-lisa/index.htm
+
+RESTORATION CHANGES
+1. Original filename index.htm is preserved within Lady Lisa's original site position.
+2. Original wording, spelling, capitalization, colors, table layout, marquee, graphics,
+   and page credit are preserved.
+3. The original Spiritbook service is no longer used; its invitation is preserved as
+   historical visible text, while dead Sign/View links are not made live.
+4. The historical next destination was:
+   http://cherubschampions.com/cherubs/ladylisa/cherubchristmas/
+   It now points to cherubchristmas/index.htm.
+5. Internal restored-site navigation opens in the same browser tab.
+6. Original music was AwayInAManger.wav. Preserve that WAV unchanged.
+   AwayInAManger.mp3 is the modern playback derivative used first by the browser.
+7. Modern playback attempts autoplay; if blocked, the first click/tap/key press tries
+   again. A visible Play/Pause control remains available.
+8. No visible Donna attribution was added because the surviving page credits Lady Lisa.
+
+ARCHIVAL RULE
+Keep the untouched recovered HTML as the archival master.
+-->
+<HTML>
+<HEAD>
+<TITLE>Christmas Hope</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+</HEAD>
+
+<BODY background="bg1.gif" bgcolor="#524735" link="#FDFCF9" vlink="#FDFCF9" alink="#FDFCF9">
+
+<DIV align="right"><IMG src="star.gif" border="0" alt=""></DIV>
+
+<CENTER>
+<TABLE border="1" cellpadding="0" cellspacing="15" width="90%" background="strip1.jpg"
+       bordercolorlight="#d9f0f9" bordercolordark="#074F07">
+<TR><TD width="100%">
+
+<CENTER>
+<TABLE border="0" cellpadding="0" cellspacing="5" width="100%" background="strip1.jpg">
+<TR><TD width="100%">
+
+<CENTER>
+<TABLE border="1" cellpadding="0" cellspacing="10" width="100%" background="strip1.jpg"
+       bordercolorlight="#524735" bordercolordark="#524735">
+<TR><TD width="100%">
+
+<CENTER>
+<TABLE border="0" cellpadding="0" cellspacing="5" width="100%" background="strip1.jpg">
+<TR><TD width="100%">
+
+<CENTER>
+<TABLE border="1" cellpadding="0" cellspacing="6" width="100%" background="strip1.jpg"
+       bordercolorlight="#524735" bordercolordark="#524735">
+<TR><TD width="100%">
+
+<CENTER>
+<TABLE border="0" cellpadding="0" cellspacing="0" width="100%" background="bg2.jpg">
+<TR><TD width="100%" align="center">
+
+<BR>
+<IMG src="top.jpg" border="0" alt="">
+<BR><BR>
+
+<CENTER>
+<TABLE border="1" cellpadding="0" cellspacing="5" width="80%" background="strip1.jpg"
+       bordercolorlight="#524735" bordercolordark="#524735">
+<TR><TD width="100%">
+
+<CENTER>
+<TABLE border="1" cellpadding="0" cellspacing="5" width="100%" background="strip1.jpg"
+       bordercolorlight="#524735" bordercolordark="#524735">
+<TR><TD width="100%">
+
+<CENTER>
+<TABLE border="1" cellpadding="0" cellspacing="5" width="100%" background="strip1.jpg"
+       bordercolorlight="#524735" bordercolordark="#524735">
+<TR><TD width="100%">
+
+<CENTER>
+<TABLE border="0" cellpadding="7" cellspacing="0" width="100%" background="bg2.jpg">
+<TR><TD width="100%" align="center">
+
+<BR>
+<FONT color="#FDFCF9" face="Arial" size="+1">
+<IMG src="top2.jpg" border="0" alt="">
+<BR><BR>
+
+The Christmas season brings<BR>
+a new and ever lasting.. Light of Hope!<BR>
+Jesus, life gave us Faith! and Hope!<BR><BR>
+
+To Share our Life's and Hearts, with all his Lambs..<BR>
+We are not to leave one person behind...<BR>
+We are to Forgive, To Praise, To Love one another...<BR><BR>
+
+The Christmas Season is more then Gifts we give,<BR>
+and receive.. It's a time when we Carry our Brothers<BR>
+Hearts and tend to them with loving Grace!<BR><BR>
+
+To not forget this is the day.. The Lord was Born...<BR>
+The Sweetest of Blessings, We all have been given...<BR>
+The Divine Gift of Forgiveness...<BR><BR>
+
+God Bless May This Christmas Season bring<BR>
+you Joy! And Peace within...<BR><BR>
+
+*SMILE*<BR>
+The Cherub Champions Family!<BR>
+</FONT>
+
+<BR><BR>
+
+<P align="center">
+<FONT color="#FDFCF9" size="4" face="Comic Sans MS">
+<EM><STRONG>Please Sign our Cherub Guestbook *Smile*</STRONG></EM>
+</FONT>
+</P>
+
+<!-- Historical Spiritbook owner: heavenlyteam
+Sign: http://spiritbooks.thesitefights.com/cgi-bin/gbsign.cgi?owner=heavenlyteam
+View: http://spiritbooks.thesitefights.com/cgi-bin/gbview.cgi?owner=heavenlyteam
+-->
+
+
+<!-- Original page music: AwayInAManger.wav. The MP3 is a modern playback derivative; preserve the WAV too. -->
+<audio id="pageMusic" loop preload="auto">
+  <source src="AwayInAManger.mp3" type="audio/mpeg">
+  <source src="AwayInAManger.wav" type="audio/wav">
+</audio>
+<div align="center" style="margin:12px 0;">
+  <button id="musicToggle" type="button" style="font-family:Arial,sans-serif;font-size:12px;color:#FDFCF9;background:#000000;border:1px solid #FDFCF9;padding:4px 8px;cursor:pointer;">Play Music</button>
+</div>
+
+<script type="text/javascript">
+(function () {
+  var audio;
+  var started = false;
+
+  function tryStartMusic() {
+    if (!audio || started) return;
+    var p = audio.play();
+    if (p && typeof p.then === "function") {
+      p.then(function () {
+        started = true;
+        updateButton();
+      }).catch(function () {});
+    } else {
+      started = true;
+      updateButton();
+    }
+  }
+
+  function updateButton() {
+    var btn = document.getElementById("musicToggle");
+    if (!btn || !audio) return;
+    btn.innerHTML = audio.paused ? "Play Music" : "Pause Music";
+  }
+
+  function toggleMusic() {
+    if (!audio) return;
+    if (audio.paused) {
+      var p = audio.play();
+      if (p && typeof p.then === "function") {
+        p.then(function () {
+          started = true;
+          updateButton();
+        }).catch(function () {});
+      } else {
+        started = true;
+        updateButton();
+      }
+    } else {
+      audio.pause();
+      updateButton();
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", function () {
+    audio = document.getElementById("pageMusic");
+    var btn = document.getElementById("musicToggle");
+    if (btn) btn.onclick = toggleMusic;
+
+    tryStartMusic();
+
+    function firstInteraction() {
+      tryStartMusic();
+      document.removeEventListener("click", firstInteraction);
+      document.removeEventListener("touchstart", firstInteraction);
+      document.removeEventListener("keydown", firstInteraction);
+    }
+
+    document.addEventListener("click", firstInteraction);
+    document.addEventListener("touchstart", firstInteraction, {passive:true});
+    document.addEventListener("keydown", firstInteraction);
+
+    if (audio) {
+      audio.addEventListener("play", updateButton);
+      audio.addEventListener("pause", updateButton);
+    }
+    updateButton();
+  });
+})();
+</script>
+
+
+
+<P align="center">
+<B><FONT size="4">
+<IMG src="next.jpg" border="0" alt="Next"><BR>
+</FONT></B>
+<A href="cherubchristmas/index.htm">
+<FONT size="+2" color="#FDFCF9">Click Here to<BR>A Cherub Christmas</FONT>
+</A>
+<BR><BR><BR>
+
+<FONT size="2" color="#FDFCF9">
+<B>Page By: Lady Lisa</B>
+</FONT>
+</P>
+
+</TD></TR></TABLE>
+</CENTER>
+
+</TD></TR></TABLE>
+</CENTER>
+
+</TD></TR></TABLE>
+</CENTER>
+
+</TD></TR></TABLE>
+</CENTER>
+
+</TD></TR></TABLE>
+</CENTER>
+
+</TD></TR></TABLE>
+</CENTER>
+
+</TD></TR></TABLE>
+</CENTER>
+
+</TD></TR></TABLE>
+</CENTER>
+
+</BODY>
+</HTML>
