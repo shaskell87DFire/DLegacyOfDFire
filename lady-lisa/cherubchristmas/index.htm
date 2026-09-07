@@ -3,7 +3,7 @@
 <!--
 PRESERVATION NOTE - 2026
 
-SOURCE PAGE TITLE
+SOURCE PAGE TITLE:
 A Cherub Christmas
 
 RESTORATION LOCATION:
@@ -18,20 +18,25 @@ next.jpg
 TheMostWonderfulTimeOfTheYear.wav
 
 RESTORATION NOTES:
-- Original wording, capitalization, spelling, colors, graphics,
+- Original wording, spelling, capitalization, colors, graphics,
   nested table design, marquee and Lady Lisa credit are preserved.
-- Malformed original next-image tag was repaired.
+- Original malformed next.jpg tag was repaired.
 - Original "coor" typo in the Holiday Page link was repaired to "color".
-- Original external Holiday Page link now points to the restored local page.
-- Original WAV is preserved unchanged.
-- Modern audio playback is provided because EMBED is obsolete.
-- No Spiritbook section was added because none appears in this page's
-  surviving original HTML.
-- No visible D'Fire/Donna attribution was added because this page
-  visibly credits Lady Lisa.
+- Historical Holiday Page URL now points to the restored local page.
+- Original TheMostWonderfulTimeOfTheYear.wav is preserved unchanged.
+- Obsolete EMBED music markup was replaced with modern AUDIO playback.
+- Autoplay is attempted, but modern browsers may require user interaction.
+- First click/tap/key press retries playback if autoplay is blocked.
+- A visible Play/Pause Music control is provided.
+- No Spiritbook was added because none appears in the surviving source.
+- No visible Donna/D'Fire attribution was added because the page
+  itself credits Lady Lisa.
+
+HISTORICAL NEXT URL:
+http://cherubschampions.com/cherubs/ladylisa/holiday/
 
 ARCHIVAL RULE:
-Keep the untouched original recovered HTML separately as the archival master.
+Keep the untouched recovered HTML separately as the archival master.
 -->
 
 <html>
@@ -74,7 +79,7 @@ alink="#9B4009">
 <center>
 
 
-<!-- OUTER BORDER -->
+<!-- OUTER FRAME -->
 
 <table
 border="1"
@@ -203,10 +208,9 @@ border="0"
 src="top.jpg"
 width="374"
 height="321"
-alt="A Cherub Christmas">
+alt="">
 
 </p>
-
 
 
 <!-- INNER STORY FRAME -->
@@ -334,6 +338,7 @@ bgcolor="#6076DE">
 
 <p align="center">&nbsp;</p>
 
+
 <p align="center">
 
 <img
@@ -350,6 +355,7 @@ alt="">
 
 
 <font color="#9B4009">
+
 
 <p align="center">
 
@@ -408,4 +414,443 @@ He tells of Cherubs Spirit that has lifted his Heart<br>
 
 in so many ways.. And he is always on guard when it<br>
 
-comes to.. Lady
+comes to.. Lady Lisa LOL<br>
+
+<br>
+
+
+The Cherubs, snug as a bug in.. The Cherubs<br>
+
+Wings of Spirit!<br>
+
+The Cherub Spirit &amp; CCL, The Fairies...<br>
+
+The Cherub Wee Ones, The Sunshine Hearts..<br>
+
+All Look to Top Dog... Tell how the Cherubs<br>
+
+Began Top Dog Sir....<br>
+
+<br>
+
+
+That is for another Times Dears...<br>
+
+For it's time to rest for Christmas Day...<br>
+
+Finish your Co Co and May I not<br>
+
+See One single Cherub out Painting The<br>
+
+Cherub Halls tonight.. To all a Good Night!!!<br>
+
+Here's to another Great Year in The Cherubs<br>
+
+Family!
+
+</font>
+
+</b>
+
+</p>
+
+
+<p align="center">
+
+<br>
+
+<marquee
+style="
+font-size:18pt;
+color:#9B4009;
+font-weight:bold;
+"
+width="85%">
+
+Merry Christmas &amp; Happy New Year!
+
+</marquee>
+
+</p>
+
+
+
+<!-- ORIGINAL MUSIC -->
+
+<audio
+id="pageMusic"
+loop
+preload="auto">
+
+<source
+src="TheMostWonderfulTimeOfTheYear.wav"
+type="audio/wav">
+
+</audio>
+
+
+<div
+align="center"
+style="margin:12px 0;">
+
+<button
+id="musicToggle"
+type="button"
+style="
+font-family:Arial,sans-serif;
+font-size:12px;
+color:#9B4009;
+background:#000000;
+border:1px solid #9B4009;
+padding:4px 8px;
+cursor:pointer;
+">
+
+Play Music
+
+</button>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+(function () {
+
+    var audio;
+    var started = false;
+
+
+    function updateButton() {
+
+        var btn =
+            document.getElementById("musicToggle");
+
+        if (!btn || !audio)
+            return;
+
+        btn.innerHTML =
+            audio.paused
+            ? "Play Music"
+            : "Pause Music";
+
+    }
+
+
+    function tryStartMusic() {
+
+        if (!audio || started)
+            return;
+
+        var playAttempt =
+            audio.play();
+
+        if (
+            playAttempt &&
+            typeof playAttempt.then === "function"
+        ) {
+
+            playAttempt.then(function () {
+
+                started = true;
+                updateButton();
+
+            }).catch(function () {
+
+                /*
+                Modern browser blocked audible autoplay.
+                First user interaction will try again.
+                */
+
+            });
+
+        }
+
+    }
+
+
+    function toggleMusic() {
+
+        if (!audio)
+            return;
+
+
+        if (audio.paused) {
+
+            var playAttempt =
+                audio.play();
+
+            if (
+                playAttempt &&
+                typeof playAttempt.then === "function"
+            ) {
+
+                playAttempt.then(function () {
+
+                    started = true;
+                    updateButton();
+
+                }).catch(function () {});
+
+            }
+
+        } else {
+
+            audio.pause();
+
+            updateButton();
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            audio =
+                document.getElementById("pageMusic");
+
+            var btn =
+                document.getElementById("musicToggle");
+
+            if (btn)
+                btn.onclick = toggleMusic;
+
+
+            tryStartMusic();
+
+
+            function firstInteraction() {
+
+                tryStartMusic();
+
+                document.removeEventListener(
+                    "click",
+                    firstInteraction
+                );
+
+                document.removeEventListener(
+                    "touchstart",
+                    firstInteraction
+                );
+
+                document.removeEventListener(
+                    "keydown",
+                    firstInteraction
+                );
+
+            }
+
+
+            document.addEventListener(
+                "click",
+                firstInteraction
+            );
+
+            document.addEventListener(
+                "touchstart",
+                firstInteraction,
+                { passive: true }
+            );
+
+            document.addEventListener(
+                "keydown",
+                firstInteraction
+            );
+
+
+            if (audio) {
+
+                audio.addEventListener(
+                    "play",
+                    updateButton
+                );
+
+                audio.addEventListener(
+                    "pause",
+                    updateButton
+                );
+
+            }
+
+
+            updateButton();
+
+        }
+    );
+
+})();
+
+</script>
+
+
+
+<!-- NEXT PAGE -->
+
+<p align="center">
+
+
+<b>
+
+<font size="4">
+
+<br>
+
+<img
+src="next.jpg"
+border="0"
+alt="Next">
+
+<br>
+
+</font>
+
+
+<br>
+
+
+<a href="../holiday/index.htm">
+
+<font
+size="+2"
+color="#9B4009">
+
+Click Here to Holiday Page
+
+</font>
+
+</a>
+
+
+<br>
+<br>
+
+
+<font color="#9B4009">
+
+Page By: Lady Lisa<br>
+
+Thanks For Stopping By *SMILE*
+
+</font>
+
+
+</b>
+
+
+</p>
+
+
+</font>
+
+
+<!-- CLOSE INNER STORY FRAME -->
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+
+<!-- CLOSE OUTER FRAME -->
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+</center>
+</div>
+
+</td>
+</tr>
+</table>
+
+
+</center>
+</div>
+
+
+</body>
+
+</html>
