@@ -38,6 +38,9 @@ RESTORATION CHANGES
    /dfire/thanksgiving-02/
 10. Historical wording, spelling, fonts, tables, CW-ID material, scripts, and
    overall page structure are otherwise preserved as closely as practical.
+11. The legacy no-right-click/context-menu script and SPAN-level right-click/
+   image-drag blockers are disabled in the working restoration. The untouched
+   recovered HTML remains preserved separately as the archival master.
 
 ARCHIVAL RULE
 Preserve the untouched recovered HTML separately as the archival master.
@@ -154,45 +157,15 @@ All rights reserved
 <META content="" name=keywords>
 <META content=CuteHTML name=generator>
 <META http-equiv=imagetoolbar content=no>
-<SCRIPT language=JavaScript>
 <!--
-
-//Disable right mouse click Script
-//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
-//For full source code, visit http://www.dynamicdrive.com
-
-var message="Function Disabled!";
-
-///////////////////////////////////
-function clickIE4(){
-if (event.button==2){
-alert(message);
-return false;
-}
-}
-
-function clickNS4(e){
-if (document.layers||document.getElementById&&!document.all){
-if (e.which==2||e.which==3){
-alert(message);
-return false;
-}
-}
-}
-
-if (document.layers){
-document.captureEvents(Event.MOUSEDOWN);
-document.onmousedown=clickNS4;
-}
-else if (document.all&&!document.getElementById){
-document.onmousedown=clickIE4;
-}
-
-document.oncontextmenu=new Function("alert(message);return false")
-
-// --> 
-</SCRIPT>
-<SPAN oncontextmenu="return false;" ondragstart="return false" ;><!--Place this script in the HEAD section.-->
+PRESERVATION NOTE - 2026: LEGACY ANTI-COPY SCRIPT DISABLED
+D'Fire's recovered Memorial page contained a legacy JavaScript block that
+disabled the right-click/context menu and a SPAN that blocked right-click and
+image dragging. Those restrictions are disabled in the working restoration so
+visitors can use normal browser controls. The untouched recovered HTML remains
+preserved separately as the archival master.
+-->
+<SPAN><!-- Original anti-copy SPAN wrapper retained without blocking attributes. -->
 <SCRIPT language=VBScript>
 <!-- 
 // Copyright (C) 2001 LiveUpdate
