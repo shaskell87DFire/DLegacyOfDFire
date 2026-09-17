@@ -2504,3 +2504,176 @@ Navigation:
 - Preserve Next as non-clickable unless another primary source establishes its destination.
 
 This page should be flagged as useful source material for future Site Fights museum/explainer content and social-media history storytelling.
+
+## September 2026 Restoration Update
+
+### Lady Lisa Pages
+
+A side restoration was completed for several surviving pages belonging to Lady Lisa, a friend and fellow Site Fighter who worked closely with D'Fire.
+
+Recovered/restored material includes:
+
+- Christmas Hope
+- A Cherub Christmas
+- Our Prayers Are With You!
+- Christmas Keepsakes 2004
+- Sissy Lisa!
+
+Current restored structure:
+
+- `/lady-lisa/index.htm`
+- `/lady-lisa/cherubchristmas/index.htm`
+- `/lady-lisa/holiday/index.htm`
+- `/lady-lisa/keepsakes/index.htm`
+- `/lady-lisa/sissylisa.htm`
+
+The historical `keepsakes%20/` directory contained a trailing encoded space. For modern hosting compatibility, this was normalized to `/keepsakes/`.
+
+Lady Lisa's surviving Christmas pages visibly credit "Page By: Lady Lisa." No visible D'Fire attribution was added because the surviving pages do not identify D'Fire's exact contribution.
+
+Historical Spiritbook elements were preserved visually where they appeared. Dead Spiritbook services were not recreated or replaced with invented functionality.
+
+The original WAV files were preserved. MP3 derivatives may be created separately for modern browser compatibility while retaining the WAV originals.
+
+No missing pages, navigation destinations, graphics, or music were invented.
+
+
+### Top Dog Birthday Pages
+
+A recovered multi-page birthday collection for Top Dog was repaired and restored.
+
+Current restored directory:
+
+`/topdog-birthday/`
+
+Entry page:
+
+`/topdog-birthday/index.html`
+
+Additional surviving pages include:
+
+- `adoptions.html`
+- `gifts.html`
+- `gifts2.html`
+- `gifts3.html`
+- `gifts4.html`
+- `gifts5.html`
+- `gifts6.html`
+- `gifts7.html`
+- `gifts8.html`
+
+The recovered pages originally contained image references that no longer resolved correctly. Asset paths were repaired so the surviving graphics now load from the restored local collection.
+
+Clean public entry URL:
+
+`https://dlegacyofdfire.com/topdog-birthday/`
+
+
+### D'Fire 2004 Birthday Site
+
+D'Fire's complete seven-page 2004 birthday collection was recovered from archived GeoCities captures.
+
+Original landing page:
+
+`http://www.geocities.com/dfire_tsf/bday_04.html`
+
+Original final page:
+
+`http://www.geocities.com/dfire_tsf/bday_04pg7.html`
+
+The surviving sequence confirms seven pages:
+
+1. `bday_04.html`
+2. `bday_04pg2.html`
+3. `bday_04pg3.html`
+4. `bday_04pg4.html`
+5. `bday_04pg5.html`
+6. `bday_04pg6.html`
+7. `bday_04pg7.html`
+
+For the restored site, the collection is organized as:
+
+- `/dfire/bdays/2004/index.html`
+- `/dfire/bdays/2004/bday_04pg2.html`
+- `/dfire/bdays/2004/bday_04pg3.html`
+- `/dfire/bdays/2004/bday_04pg4.html`
+- `/dfire/bdays/2004/bday_04pg5.html`
+- `/dfire/bdays/2004/bday_04pg6.html`
+- `/dfire/bdays/2004/bday_04pg7.html`
+- `/dfire/bdays/2004/assets/`
+
+The original `bday_04.html` landing page is restored as `index.html` so the birthday directory has a clean entry URL.
+
+The original pages referenced their graphics through a shared `bdays/` directory. For the restored collection, those references were changed to the year-specific `assets/` directory while retaining the original asset filenames.
+
+All seven pages reuse the same "Happy Day" background/table graphics and layout. The collection includes birthday greetings, adoptions, gifts from Site Fights friends, navigation graphics, and a historical Spiritbook.
+
+The landing page Spiritbook used owner:
+
+`hbdfire`
+
+The surviving custom Spiritbook graphics include:
+
+- `happydayview.jpg`
+- `happydaysign.jpg`
+- `spiritbutton.gif`
+
+The obsolete Spiritbook service was not recreated. Its visible historical graphics were retained and its original URLs preserved in source comments.
+
+The seven original pages directly reference 70 unique local image/background assets. Additional recovered files associated with the collection are being retained rather than deleted simply because they are not referenced by the surviving seven pages.
+
+All seven restored pages were visually inspected after reconstruction. Backgrounds, table textures, navigation graphics, birthday graphics, and recovered gift images are displaying correctly.
+
+Page 7 contains the historical Next graphic but no surviving destination link. The graphic remains visible and inactive rather than inventing an eighth page.
+
+GeoCities/Yahoo-generated tracking and hosting code appearing after the historical page content was removed from the working reconstruction. Untouched archive extractions are retained separately as source material.
+
+
+### Birthday Collection Organization
+
+The birthday restorations are now organized by year:
+
+`/dfire/bdays/2002/`
+
+`/dfire/bdays/2003/`
+
+`/dfire/bdays/2004/`
+
+Each year may contain multiple HTML pages and its own `/assets/` directory.
+
+The 2002 birthday collection is known to contain seven primary birthday/gift pages plus a separate quilt page.
+
+The 2003 birthday collection also contains additional gift material that is still being recovered.
+
+The 2002 and 2003 gift-page restorations remain pending.
+
+
+### Image-Slice Preservation Rule
+
+Some early-web graphics were intentionally constructed from two or more separate images placed immediately beside one another in the HTML.
+
+During cleanup, do not insert comments, formatting whitespace, or other elements between adjacent image tags when those images are intended to form one visual graphic.
+
+Preserve their original adjacency whenever possible.
+
+This rule was added after the 2004 birthday Spiritbook graphics revealed that whitespace introduced during cleanup could create a visible seam between image slices.
+
+
+### Wayback HTML Recovery Method
+
+When possible, recover archived HTML using Wayback's `id_` replay modifier.
+
+Example:
+
+`https://web.archive.org/web/TIMESTAMPid_/http://original-url/`
+
+This generally provides a cleaner archived resource without normal Wayback URL rewriting and toolbar injection.
+
+The extracted archived HTML should first be retained unchanged as a source master.
+
+Cleanup and compatibility changes should be made only to a separate reconstruction copy.
+
+
+### Current Site Milestone
+
+As of September 16, 2026, the site's visitor counter has reached 92 visits while restoration work is still actively underway.
