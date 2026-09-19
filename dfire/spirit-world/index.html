@@ -25,9 +25,11 @@ RESTORATION CHANGES
 7. Forced new-window/new-tab behavior was removed.
 8. The original MIDI call referenced:
    /community/spirit/spiritfire/midis/wintertime_1_.mid
-   It is redirected to assets/midis/wintertime_1_.mid. The legacy playback code
-   is otherwise preserved; modern browser playback may require a later compatibility
-   derivative if the original MIDI is recovered.
+   The automatic playback call is DISABLED in the live restoration because modern
+   browsers were prompting visitors to download/open the missing MIDI file.
+   The historical filename and playback code remain preserved in source comments/code
+   so the music can be restored later if a usable original or compatibility derivative
+   is recovered.
 9. Host-generated advertising/wrapper scripts and browser-save suppression code
    were removed from the restoration copy.
 10. Historical wording, spelling, graphics, layout, and Donna's visible credit are
@@ -309,10 +311,16 @@ background="assets/phantasy1_bkgd3.jpg" border=2>
             width=174 border=0></IMG> <BR><BR><FONT color=#baa496><FONT 
             size=2>Background, banners and buttons created by Donna [aka Spirit 
             Fire]
-            <SCRIPT language=JavaScript>
-<!-- 
-PlaySong("assets/midis/wintertime_1_.mid")
-//--> 
-</SCRIPT>
+            <!--
+            PRESERVATION NOTE - 2026:
+            Automatic MIDI playback disabled in the live restoration because it
+            caused modern browsers to prompt visitors to download/open the file.
+
+            Original restored call (preserved as text only):
+            PlaySong("assets/midis/wintertime_1_.mid")
+
+            Historical original MIDI:
+            /community/spirit/spiritfire/midis/wintertime_1_.mid
+            -->
 <!-- Original Site Fights/browser wrapper code removed in 2026 restoration. -->
 </FONT></FONT></P></CENTER></FONT></FONT></FONT></FONT></FONT></FONT></FONT></CENTER></CENTER></TR></TBODY></TABLE></CENTER></TR></TBODY></TABLE></CENTER></BODY></HTML>
