@@ -38,3 +38,10 @@
   - Birthday pages: cakes, balloons, etc.
   - Core D’Fire pages: flames or other fitting symbols.
   - Keep icons simple enough to read at favicon size and consistent with the retro D’Fire aesthetic.
+
+- [ ] Museum Door / Entrance Page Upgrade
+  - Eventually redesign the museum-door entrance page to make it more immersive and polished.
+  - Create a fancier custom entrance-door button.
+  - Experiment with layered backgrounds to give the page more depth.
+  - Keep the overall look rooted in the early-web / D’Fire aesthetic rather than making it feel like a generic modern website.
+  - Preserve the current page until the upgraded version is ready.
