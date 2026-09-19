@@ -2677,3 +2677,283 @@ Cleanup and compatibility changes should be made only to a separate reconstructi
 ### Current Site Milestone
 
 As of September 16, 2026, the site's visitor counter has reached 92 visits while restoration work is still actively underway.
+
+---
+
+# September 18-19, 2026 Restoration Update
+
+## Caitlyn / KatieBug Restoration
+
+Caitlyn's restored KatieBug collection is being placed under:
+
+`/dfire/playground/katiebug/`
+
+Shared live-restoration asset directory:
+
+`/dfire/playground/katiebug/assets/`
+
+Restored/cleaned pages now include:
+
+- `katiebug1.html`
+- `katiebug2.html`
+- `scrapbook.html`
+- `school_daze.html`
+- `bday05.html`
+- `bday_gifts.html`
+- `bday_gifts2.html`
+- `bday_gifts3.html`
+- `bday_gifts4.html`
+- `bday_gifts5.html`
+
+The restored Page 1 path is:
+
+`/dfire/playground/katiebug/katiebug1.html`
+
+### KatieBug Page 1
+
+Recovered title:
+
+`KatieBug's Place`
+
+The page states that the site first went online August 16, 2005.
+
+Important restored routing:
+
+- My Mom's Website -> `/dfire/faces-of-fire/`
+- My Sister's Website -> `/dfire/mdollz/`
+
+KatieBug's SpiritBook area uses:
+
+- `lil_ladybug_sign.jpg`
+- `spiritbutton.gif`
+- `lil_ladybug_view.jpg`
+
+A recovered local copy of `spiritbutton.gif` is now used instead of the dead external SpiritBooks copy.
+
+### KatieBug Page 2
+
+Recovered title:
+
+`Katie Bug...page2`
+
+Navigation:
+
+- Back -> `katiebug1.html`
+- Next -> `scrapbook.html`
+- Home -> `katiebug1.html`
+
+This page contains a large collection of adoptables, certificates, stamps, dolls, and other early-web graphics.
+
+### KatieBug Scrapbook
+
+Recovered title:
+
+`Katie Bug's Scrapbook`
+
+Navigation:
+
+- Back -> `katiebug2.html`
+- Home -> `katiebug1.html`
+
+The surviving Next graphic has no hyperlink destination.
+
+Preservation rule:
+
+- keep the Next graphic visible
+- leave it non-clickable
+- do not invent another scrapbook page without evidence
+
+### School Daze
+
+Recovered title:
+
+`School Daze`
+
+Restored filename:
+
+`school_daze.html`
+
+The surviving source contains no Back/Home navigation, so none was invented.
+
+## KatieBug 2005 Birthday Collection
+
+Main birthday page:
+
+`bday05.html`
+
+Birthday gift sequence:
+
+1. `bday_gifts.html`
+2. `bday_gifts2.html`
+3. `bday_gifts3.html`
+4. `bday_gifts4.html`
+5. `bday_gifts5.html`
+
+Full restored sequence:
+
+`bday05.html`
+-> `bday_gifts.html`
+-> `bday_gifts2.html`
+-> `bday_gifts3.html`
+-> `bday_gifts4.html`
+-> `bday_gifts5.html`
+
+### Birthday Gifts Page 5 Navigation Repair
+
+The surviving Page 5 Back link points to:
+
+`bday_gifts3.html`
+
+However, Page 4 clearly links forward to Page 5.
+
+For the live restoration:
+
+- Back was repaired to `bday_gifts4.html`
+- the original `bday_gifts3.html` destination is preserved in an HTML comment
+- Home points to `katiebug1.html`
+- the Next graphic remains non-clickable because no destination survives
+
+## KatieBug Asset Structure
+
+D'Fire's local backup frequently stores each Caitlyn page or page group with its own supporting graphics, including duplicate copies of common backgrounds and buttons.
+
+Archival rule:
+
+Do not delete or consolidate D'Fire's original duplicate files from the source archive merely because identical copies appear in multiple saved folders.
+
+Live restoration rule:
+
+The GitHub KatieBug restoration may use one shared:
+
+`/dfire/playground/katiebug/assets/`
+
+directory while the untouched original folder structure is retained separately as source material.
+
+## Page 3 Broken Image Check
+
+Almost all Birthday Gifts Page 3 images were reported broken on the live restoration even though the expected files appear to exist locally.
+
+Verify before recreating anything:
+
+- files were uploaded to `/dfire/playground/katiebug/assets/`
+- exact filenames and extensions match
+- capitalization matches
+- no GitHub path mismatch exists
+
+Do not recreate these graphics unless the originals are confirmed missing.
+
+## Restoration Link Policy Update
+
+### Same-tab default
+
+Restored links should open in the same browser tab by default.
+
+Historical `target="_blank"` and equivalent variants were removed project-wide unless there is a specific reason to keep them.
+
+### External link policy for family restorations
+
+For Caitlyn's restored pages, keep clickable only:
+
+- Caitlyn/KatieBug pages restored locally
+- D'Fire pages restored locally
+- Shana/MDollz pages restored locally
+- Site Fights historical links routed to `/dfire/what-was-tsf/`
+
+Ordinary external adoption, artist, commercial, and fan-site links should generally be made non-clickable.
+
+When removing them:
+
+- preserve visible text/graphics
+- preserve the original URL in an HTML comment when practical
+- do not erase attribution text
+
+## KatieBug Routing Correction
+
+A temporary placeholder route had previously been used:
+
+`/dfire/katiebug/`
+
+The actual restored route is:
+
+`/dfire/playground/katiebug/katiebug1.html`
+
+A repository-wide replacement corrected 23 occurrences across 18 files.
+
+A follow-up search confirmed zero remaining matches for:
+
+`/dfire/katiebug/`
+
+## Workflow Rule - New HTML Files
+
+Whenever a new HTML source is supplied for restoration, provide and record the intended GitHub file path as part of the cleanup process.
+
+## Site-wide Favicon
+
+A fire favicon was added as:
+
+`favicon.ico`
+
+It is stored at the root of the DLegacyOfDFire repository beside files such as:
+
+- `index.html`
+- `CNAME`
+- `sitemap.xml`
+- `ARCHIVE_PROJECT_NOTES.md`
+
+Expected public path:
+
+`/favicon.ico`
+
+This allows the favicon to work site-wide without modifying every historical HTML file.
+
+## MDollz Birthday Material - Future Project
+
+### Shana 2002 Birthday Page
+
+Wayback HTML survives for a page titled:
+
+`Happy Birthday Shana!!`
+
+The HTML survives, but the graphics are currently missing.
+
+The source preserves the original layout, wording, navigation, Site Fights links, SpiritBook code, and many image filenames.
+
+Continue searching local backups and archived Site Fights directories for exact filename matches.
+
+### Shana 2004 Birthday Page
+
+The 2004 birthday page is confirmed missing from both:
+
+- available local backup material
+- Wayback material checked so far
+
+Treat as known missing material.
+
+Do not reconstruct it from later birthday pages without new primary evidence.
+
+### Shana 2006 / 19th Birthday Page
+
+A locally surviving birthday page made by D'Fire for Shana has been recovered.
+
+It is confirmed as a 2006 page because it was created for Shana's 19th birthday.
+
+The page should be included in future MDollz preservation work.
+
+Publication status is not yet confirmed.
+
+It may have appeared on a later version of the site that was not included in the surviving external-drive backup.
+
+Document it as confirmed D'Fire-created material with uncertain original live-site placement.
+
+## Current Next Session
+
+KatieBug's 2005 birthday collection through Birthday Gifts Page 5 is now cleaned/restored.
+
+Next session should continue with the remaining Caitlyn pages linked from KatieBug Page 1:
+
+- `autumn.html`
+- `winter.html`
+- `winter2.html`
+- `spring.html`
+
+Also verify the broken Birthday Gifts Page 3 images before considering the birthday collection fully checked.
