@@ -2957,3 +2957,404 @@ Next session should continue with the remaining Caitlyn pages linked from KatieB
 - `spring.html`
 
 Also verify the broken Birthday Gifts Page 3 images before considering the birthday collection fully checked.
+
+# D'Fire Restoration Project Notes — September 19, 2026
+
+## Session Status
+
+Holiday restoration work is now underway.
+
+Holiday pages are being fully restored and prepared in the private staging repository, but they are **not yet being published to the public DLegacyOfDFire site**. This is intentional so the TikTok/restoration story does not get too far behind the actual website work.
+
+Public destination when ready:
+
+https://dlegacyofdfire.com/
+
+---
+
+# Halloween 2001
+
+## Original Page
+
+Original URL:
+
+http://www.sitefights.com/community/spirit/spiritfire/halloween.shtml
+
+Original title:
+
+`SpiritFire's Spirited Halloween!`
+
+Future public/staged path:
+
+`dfire/halloween-01/index.html`
+
+Assets:
+
+`dfire/halloween-01/assets/`
+
+Music:
+
+`dfire/halloween-01/assets/midis/`
+
+---
+
+## Local Backup Found
+
+A surviving locally saved copy of the Halloween 2001 page was found in Donna/D'Fire's backup files.
+
+This local copy is now the **primary restoration source** for Halloween 2001.
+
+The local HTML was compared against the previously recovered Wayback version.
+
+The two versions are overwhelmingly the same page, but the Wayback version contains two original graphics that are missing from the surviving local HTML:
+
+- `flwrhween.gif`
+- `second.gif`
+
+Because the Wayback copy preserves their exact original placement, both graphics were restored to those documented positions in the staged HTML.
+
+The restoration notes identify these two graphics specifically as Wayback-supplemented assets rather than pretending they survived in the local copy.
+
+---
+
+## Historical Asset Provenance
+
+Wayback evidence also confirms that these three graphics originally loaded from D'Fire's `/third/` directory:
+
+- `doll4.gif`
+- `doll9.gif`
+- `cert.jpg`
+
+Internet Explorer bundled them into the Halloween saved-page companion folder when the local copy was saved.
+
+For the restoration, they are stored with the Halloween page assets, but their original `/third/` provenance is documented in the HTML preservation notes.
+
+---
+
+## Halloween 2001 Assets
+
+The completed staged HTML references 52 image assets.
+
+Both Wayback-only graphics are included:
+
+- `flwrhween.gif`
+- `second.gif`
+
+The page's original background is:
+
+- `backgr1.gif`
+
+---
+
+# Halloween 2001 Music
+
+The exact original MIDI used by D'Fire's Halloween page was recovered locally:
+
+`frankenstein_1.mid`
+
+The original HTML called:
+
+`/community/spirit/spiritfire/midis/frankenstein_1.mid`
+
+The original MIDI file will be preserved untouched.
+
+Planned files:
+
+`dfire/halloween-01/assets/midis/frankenstein_1.mid`
+
+`dfire/halloween-01/assets/midis/frankenstein_1.mp3`
+
+The MP3 will be a modern compatibility derivative rather than a replacement for the MIDI.
+
+The old Crescendo/VBScript/JavaScript MIDI playback system has been disabled in the restoration so modern browsers do not attempt to download/open the MIDI strangely.
+
+The staged HTML is already prepared to play:
+
+`assets/midis/frankenstein_1.mp3`
+
+with modern HTML audio using:
+
+- autoplay
+- loop
+- preload
+
+Because modern browsers can block unmuted autoplay, the page also attempts playback again after the visitor's first click, tap, or keypress.
+
+The goal is to reproduce the original automatic music behavior as closely as modern browsers permit.
+
+---
+
+## Halloween MIDI TikTok Idea
+
+Create a behind-the-scenes TikTok showing the restoration of D'Fire's original Halloween music.
+
+Possible video sequence:
+
+1. Show the original Halloween HTML calling `frankenstein_1.mid`.
+2. Show the recovered original MIDI file.
+3. Open it briefly in MuseScore.
+4. Explain that MIDI is musical instruction/data rather than a normal audio recording.
+5. Show how MuseScore interprets the MIDI into notation/tracks.
+6. Explain that MIDI playback can sound different depending on the program/sound source.
+7. Mention that MuseScore was wonky during previous conversion attempts.
+8. Use Audacity and the established working method to create the MP3.
+9. Preserve both files:
+   - Original MIDI = archival artifact
+   - MP3 = modern playback derivative
+10. Put the MP3 into the restored page.
+11. End with Mom's restored Halloween page playing its music again.
+
+Possible caption/angle:
+
+> I found the original music file from my mom's 2001 website. Now I have to teach a 25-year-old MIDI file how to survive on the modern internet. 😂🎃
+
+NEXT SESSION REMINDER:
+
+**Convert `frankenstein_1.mid` to MP3 using Audacity and record the process for the TikTok.**
+
+---
+
+# Halloween 2002
+
+## Original Page
+
+Original URL:
+
+http://www.angelfire.com/mi4/spiritfire/events/halloween.html
+
+Original title:
+
+`` `Fire's Halloween Party, 2002` ``
+
+This page represents part of D'Fire's Angelfire-era web material rather than the Site Fights community-hosted pages.
+
+Staged/future path:
+
+`dfire/halloween-02/index.html`
+
+Assets:
+
+`dfire/halloween-02/assets/`
+
+---
+
+## Restoration
+
+The surviving local saved copy was used as the primary restoration source.
+
+A large amount of Angelfire/Lycos host-generated material was removed, including:
+
+- advertising code
+- toolbar code
+- tracking code
+- search code
+- host-generated scripts
+- popup/browser helper material
+
+Donna's actual page-builder content and old HTML layout were retained.
+
+The restored page uses 26 actual page assets.
+
+There is no MIDI/music call in the recovered Halloween 2002 HTML.
+
+---
+
+## Halloween 2002 Navigation
+
+Original bottom navigation included:
+
+- `spiderback.gif`
+- `spidernext.gif`
+- `spiderhome.gif`
+- `spiderview.gif`
+
+`spiderback.gif` existed visually but was not linked in the recovered source, so no destination was invented.
+
+Current staged routing:
+
+Next:
+
+`/dfire/thanksgiving-02/`
+
+View Halloween 2001:
+
+`/dfire/halloween-01/`
+
+The Angelfire sitemap button remains visually present but unlinked for now because the original sitemap destination has not yet been restored.
+
+Its historical destination is preserved in the source comments.
+
+---
+
+# Thanksgiving 2001 — Page 1
+
+## Original Page
+
+Original URL:
+
+http://www.sitefights.com/community/spirit/spiritfire/thanks.shtml
+
+Original title:
+
+`SpiritFires ThanksGiving`
+
+Staged/future path:
+
+`dfire/thanksgiving-01/index.html`
+
+Assets:
+
+`dfire/thanksgiving-01/assets/`
+
+Music folder:
+
+`dfire/thanksgiving-01/assets/midis/`
+
+---
+
+## Thanksgiving 2001 Assets
+
+The page currently references 33 image assets.
+
+Important backgrounds/effects include:
+
+- `r02-bg2a.gif` — outer page background
+- `r02-bg1a.gif` — inner layout background
+- `snow2.gif` — falling snow effect
+
+The original falling-snow JavaScript has been retained.
+
+The historical snow graphic URL was localized to:
+
+`assets/snow2.gif`
+
+The old Dynamic Drive click-through attached to the first generated snowflake was disabled, while the historical source/credit information remains preserved in the HTML.
+
+---
+
+## Thanksgiving 2001 Navigation
+
+Current staged routing:
+
+Back:
+
+`/dfire/halloween-01/`
+
+Home:
+
+`/dfire/memorial/`
+
+Next:
+
+`/dfire/thanksgiving-01-page-2/`
+
+These correspond to the original Back, Home, and Next buttons on the page.
+
+---
+
+# Thanksgiving 2001 Music
+
+The original page automatically called:
+
+`over-the-river.mid`
+
+Historical MIDI path:
+
+`/community/spirit/spiritfire/midis/over-the-river.mid`
+
+Planned preserved files:
+
+`dfire/thanksgiving-01/assets/midis/over-the-river.mid`
+
+`dfire/thanksgiving-01/assets/midis/over-the-river.mp3`
+
+The legacy MIDI player code is disabled but preserved/documented.
+
+The staged HTML is already prepared for:
+
+`assets/midis/over-the-river.mp3`
+
+using modern autoplay + looping audio.
+
+As with Halloween 2001, modern browsers may initially block unmuted autoplay, so playback is also retried after the visitor's first interaction.
+
+---
+
+# Music Folder Structure
+
+For holiday pages containing historical MIDI files, use:
+
+`assets/midis/`
+
+If the directory is created before any music is added, use:
+
+`assets/midis/.gitkeep`
+
+Once actual MIDI/MP3 files exist, `.gitkeep` is no longer necessary, although leaving it does not hurt anything.
+
+Preservation rule:
+
+**Never replace or delete an original recovered MIDI when making an MP3.**
+
+Keep:
+
+- `.mid` = archival original
+- `.mp3` = modern compatibility derivative
+
+---
+
+# Memorial / Site Map — DO NOT UPDATE YET
+
+The Memorial/site map will eventually need another reconciliation pass.
+
+The current Valentine section appears to show only approximately three Valentine pages, while the local backups contain **at least five Valentine pages**.
+
+DO NOT update the Memorial/site map yet.
+
+Wait until all surviving Valentine pages have been examined and the full **Valentine's menagerie** is known.
+
+Reason:
+
+Updating the site map now risks repeatedly changing it as additional Valentine pages are identified.
+
+Once the Valentine restoration/review is complete:
+
+1. Inventory every surviving Valentine page.
+2. Determine original relationships/order/navigation where possible.
+3. Establish final DLegacy routes.
+4. Then update the Memorial/site map once with the complete Valentine section.
+
+---
+
+# Remaining Restoration Work
+
+Based on the currently reviewed backup files, there are **at least 18 additional pages still to work through**.
+
+This count may increase as additional pages, alternate versions, gift pages, or associated files are identified.
+
+Continue treating recovered local backups as the preferred restoration baseline when complete.
+
+Wayback should be used to:
+
+- fill documented gaps
+- recover assets absent from local copies
+- verify original paths
+- verify navigation
+- compare page versions
+- establish provenance
+
+Do not silently merge Wayback material into a local version without documenting the difference.
+
+---
+
+# Holiday Staging Rule
+
+Holiday pages are currently:
+
+**RESTORED/STAGED — NOT PUBLICLY LIVE**
+
+Continue preparing them completely in the private repository.
+
+When the social-media restoration timeline catches up, the finished folders can be copied into the public DLegacy repository with minimal or no HTML changes.
+
+Keep staged directory structure identical to the intended public structure whenever possible.
