@@ -45,3 +45,7 @@
   - Experiment with layered backgrounds to give the page more depth.
   - Keep the overall look rooted in the early-web / D’Fire aesthetic rather than making it feel like a generic modern website.
   - Preserve the current page until the upgraded version is ready.
+
+- [ ] Convert Halloween 01 MIDI to MP3
+  - Convert the MIDI file used on the Halloween 01 page to MP3 for modern browser compatibility.
+  - Keep the original MIDI file preserved alongside the converted version.
