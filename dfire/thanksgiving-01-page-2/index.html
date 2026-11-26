@@ -1,1 +1,1170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0067)http://www.sitefights.com/community/spirit/spiritfire/thanks2.shtml -->
+<!CW-ID="~22222222222222"><HTML><HEAD><TITLE>SpiritFires 2nd ThanksGiving pg.</TITLE>
 
+<!--
+PRESERVATION NOTE - 2026
+
+PRIMARY SOURCE
+This restoration is based on D'Fire's surviving locally saved copy of:
+http://www.sitefights.com/community/spirit/spiritfire/thanks2.shtml
+
+Original title:
+SpiritFires 2nd ThanksGiving pg.
+
+RESTORATION CHANGES
+1. Browser-saved companion-folder paths were changed from
+   "SpiritFires 2nd ThanksGiving pg2_files/" to "assets/" for repository hosting.
+
+2. Site Fights host-generated advertising/wrapper scripts and browser-injected
+   helper code were removed from the restoration copy.
+
+3. Historical Site Fights event/adoption links now point to
+   /dfire/what-was-tsf/, with their original URLs retained in source comments.
+
+4. Navigation was adapted for the restored DLegacyOfDFire structure:
+   Back -> /dfire/thanksgiving-01/
+   Home -> /dfire/memorial/
+
+   The recovered Next button originally pointed to:
+   http://www.sitefights.com/community/spirit/spiritfire/christmas.shtml
+
+   Because Christmas 2001 is not yet published, r02-nx.gif is retained visually
+   but intentionally left unlinked. The historical destination remains preserved
+   in the source comments.
+
+5. The original page used thanksgiving/snow2.gif in its falling-snow script.
+   The original snow2.gif has not yet been recovered. A transparent replacement
+   snowflake is used under the same filename so D'Fire's surviving snow effect can
+   remain functional. This replacement is a documented restoration asset, not an
+   original recovered graphic.
+
+6. The old Dynamic Drive click-through embedded in the first generated snowflake
+   was disabled while the original script credit remains preserved in source
+   comments.
+
+7. The obsolete external Strenee graphics-credit link was made non-clickable
+   while its historical URL remains preserved in source comments.
+
+8. The original automatic MIDI playback call for
+   /community/spirit/spiritfire/midis/now-thank-we.mid
+   is disabled. The historical MIDI filename and playback call remain preserved
+   in source comments. The original MIDI should be retained separately, and a
+   modern MP3 derivative is used for browser playback.
+
+9. Historical wording, spelling, fonts, colors, image order, image dimensions,
+   table structure, and the falling-snow effect are otherwise preserved as
+   closely as practical.
+
+PUBLICATION NOTE
+This restored page is intended for the public DLegacyOfDFire site.
+
+ARCHIVAL RULE
+Keep D'Fire's untouched recovered local source separately as the archival master.
+-->
+
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.2900.2912" name=GENERATOR></HEAD>
+
+<BODY text=#660000 vLink=#ffcc99 link=#ffcc99 bgColor=#ffcc99
+background="assets/r02-bg2a.gif">
+
+<!-- Original Site Fights host/community wrapper removed in 2026 restoration. -->
+
+<SCRIPT language=VBScript>
+<!--
+// Copyright (C) 2001 LiveUpdate
+// Permission for use granted to all music lovers on the net
+
+function PlayIE(musicFile)
+
+if IsObject(navigator) and (navigator.appName = "Microsoft Internet Explorer") then
+
+   dim cObj
+   dim objTag
+
+   on error resume next
+
+   set cObj = CreateObject("Crescendo")
+
+   cres = IsObject(cObj)
+
+   if (cres) then
+
+        document.write "<OBJECT ID=Crescendo " & _
+          "CLASSID=""clsid:0FC6BF2B-E16A-11CF-AB2E-0080AD08A326"" " & _
+          "CODEBASE=""http://activex.liveupdate.com/controls/cres.cab"" " & _
+          "HEIGHT=25 WIDTH=25> "
+
+        document.write "<PARAM NAME=""Song"" VALUE=""" & musicFile & """>"
+
+        document.write "</OBJECT>"
+
+   else
+
+      document.write "<bgsound src=""" & musicFile & """ loop=infinite>"
+
+   end if
+
+end if
+
+end function
+//-->
+</SCRIPT>
+
+
+<SCRIPT language=JavaScript>
+<!--
+
+function PlayNS(musicFile)
+{
+
+   if (navigator.appName == "Netscape")
+      {
+
+      var EmbedString
+      var musicFile
+
+      EmbedString = "<EMBED SRC='" + musicFile + "'"
+
+      EmbedString += "PLUGINSPAGE='http://www.liveupdate.com/dl.html' HEIGHT=25 WIDTH=25>"
+
+      document.write(EmbedString)
+
+      }
+
+}
+
+
+function PlaySong(SongURL)
+{
+
+   if (navigator.appName == "Netscape")
+
+       PlayNS(SongURL)
+
+   else
+
+       PlayIE(SongURL)
+
+}
+
+//-->
+</SCRIPT>
+
+
+<CENTER>
+
+
+<SCRIPT language=JavaScript1.2>
+
+/*
+Snow Effect Script
+Submitted by Altan d.o.o. (snow@altan.hr, http://www.altan.hr/snow/index.html)
+Permission granted to Dynamicdrive.com to feature script in archive
+For full source code to this script, visit http://dynamicdrive.com
+*/
+
+
+// Configure below to change URL path to the snow image
+
+var snowsrc="assets/snow2.gif"
+
+
+// Configure below to change number of snow to render
+
+var no = 20;
+
+
+var ns4up = (document.layers) ? 1 : 0;
+
+var ie4up = (document.all) ? 1 : 0;
+
+var ns6up = (document.getElementById&&!document.all) ? 1 : 0;
+
+
+var dx, xp, yp;
+
+var am, stx, sty;
+
+var i, doc_width = 800, doc_height = 600;
+
+
+if (ns4up||ns6up) {
+
+  doc_width = self.innerWidth;
+
+  doc_height = self.innerHeight;
+
+} else if (ie4up) {
+
+  doc_width = document.body.clientWidth;
+
+  doc_height = document.body.clientHeight;
+
+}
+
+
+dx = new Array();
+
+xp = new Array();
+
+yp = new Array();
+
+am = new Array();
+
+stx = new Array();
+
+sty = new Array();
+
+
+for (i = 0; i < no; ++i) {
+
+  dx[i] = 0;
+
+  xp[i] = Math.random()*(doc_width-50);
+
+  yp[i] = Math.random()*doc_height;
+
+  am[i] = Math.random()*20;
+
+  stx[i] = 0.02 + Math.random()/10;
+
+  sty[i] = 0.7 + Math.random();
+
+
+  if (ns4up) {
+
+    if (i == 0) {
+
+      // Original first-snowflake link: http://dynamicdrive.com/
+
+      document.write(
+        "<layer name=\"dot"+i+"\" left=\"15\" top=\"15\" visibility=\"show\">" +
+        "<img src='"+snowsrc+"' border=\"0\">" +
+        "</layer>"
+      );
+
+    } else {
+
+      document.write(
+        "<layer name=\"dot"+i+"\" left=\"15\" top=\"15\" visibility=\"show\">" +
+        "<img src='"+snowsrc+"' border=\"0\">" +
+        "</layer>"
+      );
+
+    }
+
+  } else if (ie4up||ns6up) {
+
+    if (i == 0) {
+
+      // Original first-snowflake link: http://dynamicdrive.com/
+
+      document.write(
+        "<div id=\"dot"+i+"\" style=\"POSITION:absolute; Z-INDEX:"+i+
+        "; VISIBILITY:visible; TOP:15px; LEFT:15px;\">" +
+        "<img src='"+snowsrc+"' border=\"0\">" +
+        "</div>"
+      );
+
+    } else {
+
+      document.write(
+        "<div id=\"dot"+i+"\" style=\"POSITION:absolute; Z-INDEX:"+i+
+        "; VISIBILITY:visible; TOP:15px; LEFT:15px;\">" +
+        "<img src='"+snowsrc+"' border=\"0\">" +
+        "</div>"
+      );
+
+    }
+
+  }
+
+}
+
+
+function snowNS() {
+
+  for (i = 0; i < no; ++i) {
+
+    yp[i] += sty[i];
+
+    if (yp[i] > doc_height-50) {
+
+      xp[i] = Math.random()*(doc_width-am[i]-30);
+
+      yp[i] = 0;
+
+      stx[i] = 0.02 + Math.random()/10;
+
+      sty[i] = 0.7 + Math.random();
+
+      doc_width = self.innerWidth;
+
+      doc_height = self.innerHeight;
+
+    }
+
+    dx[i] += stx[i];
+
+    document.layers["dot"+i].top = yp[i];
+
+    document.layers["dot"+i].left = xp[i] + am[i]*Math.sin(dx[i]);
+
+  }
+
+  setTimeout("snowNS()", 10);
+
+}
+
+
+function snowIE_NS6() {
+
+  for (i = 0; i < no; ++i) {
+
+    yp[i] += sty[i];
+
+    if (yp[i] > doc_height-50) {
+
+      xp[i] = Math.random()*(doc_width-am[i]-30);
+
+      yp[i] = 0;
+
+      stx[i] = 0.02 + Math.random()/10;
+
+      sty[i] = 0.7 + Math.random();
+
+      doc_width = ns6up ? window.innerWidth : document.body.clientWidth;
+
+      doc_height = ns6up ? window.innerHeight : document.body.clientHeight;
+
+    }
+
+    dx[i] += stx[i];
+
+    if (ie4up) {
+
+      document.all["dot"+i].style.pixelTop = yp[i];
+
+      document.all["dot"+i].style.pixelLeft =
+        xp[i] + am[i]*Math.sin(dx[i]);
+
+    } else if (ns6up) {
+
+      document.getElementById("dot"+i).style.top = yp[i];
+
+      document.getElementById("dot"+i).style.left =
+        xp[i] + am[i]*Math.sin(dx[i]);
+
+    }
+
+  }
+
+  setTimeout("snowIE_NS6()", 10);
+
+}
+
+
+if (ns4up) {
+
+  snowNS();
+
+} else if (ie4up||ns6up) {
+
+  snowIE_NS6();
+
+}
+
+</SCRIPT>
+
+
+<TR>
+
+<TD width="75%">
+
+<P>
+
+<CENTER>
+
+
+<TABLE
+height=100
+width="75%"
+background="assets/r02-bg1a.gif"
+border=4>
+
+
+<TBODY>
+
+<TR>
+
+<TD width="100%">
+
+
+<CENTER>
+
+
+<IMG
+height=151
+src="assets/r02-hd1.gif"
+width=340></IMG>
+
+
+<BR><BR><BR>
+
+
+<FONT face="Edwardian Script ITC">
+
+<FONT size=7>
+
+
+<IMG
+height=114
+src="assets/r02-cart.gif"
+width=128></IMG>
+
+
+Welcome!
+
+
+<IMG
+height=114
+src="assets/r02-cart2.gif"
+width=128></IMG>
+
+
+<BR>
+
+
+<IMG
+height=10
+src="assets/r02-ln1.gif"
+width=321></IMG>
+
+
+<BR>
+
+
+<IMG
+height=281
+src="assets/corn_centerpiece.gif"
+width=245></IMG>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/dlords/dballgame/holiday/thanksgiving/thanksgiving.html
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=120
+src="assets/cert2center.gif"
+width=220></IMG>
+
+</A>
+
+
+<BR>
+
+
+<IMG
+height=278
+src="assets/leg_wreath2.gif"
+width=300></IMG>
+
+
+<BR>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/legendary/Thanksgiving/
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=214
+src="assets/wreath_cert.jpg"
+width=214></IMG>
+
+</A>
+
+
+<BR>
+
+
+<IMG
+height=10
+src="assets/r02-ln1.gif"
+width=321></IMG>
+
+
+<BR>
+
+
+<IMG
+height=155
+src="assets/soaringeaglesbi1.gif"
+width=141></IMG>
+
+
+<IMG
+height=155
+src="assets/legends1.gif"
+width=141></IMG>
+
+
+<BR>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/dcapman/espirits/ThanksgivingBob.html
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=50
+src="assets/turkeycert.jpg"
+width=200></IMG>
+
+</A>
+
+
+<BR><BR>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/team13
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=100
+src="assets/legendsplacecard.gif"
+width=250></IMG>
+
+</A>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/team13
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=100
+src="assets/spiritsplacecard.gif"
+width=250></IMG>
+
+</A>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/team13
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=100
+src="assets/eaglesplacecard.gif"
+width=250></IMG>
+
+</A>
+
+
+<BR>
+
+
+<IMG
+height=10
+src="assets/r02-ln1.gif"
+width=321></IMG>
+
+
+<BR>
+
+
+<IMG
+height=385
+src="assets/scarecrow3.gif"
+width=300></IMG>
+
+
+<BR>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/legendary/Thanksgiving/
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=179
+src="assets/scarecrowcert.gif"
+width=265></IMG>
+
+</A>
+
+
+<IMG
+height=210
+src="assets/scarecrow2.gif"
+width=181></IMG>
+
+
+<BR>
+
+
+<IMG
+height=10
+src="assets/r02-ln1.gif"
+width=321></IMG>
+
+
+<BR>
+
+
+<FONT face=Tinkertoy>
+
+<FONT size=5>
+
+We're having a party!
+
+</FONT>
+
+
+<BR>
+
+
+<IMG
+height=35
+src="assets/browngirltgbob.gif"
+width=55></IMG>
+
+
+<IMG
+height=35
+src="assets/hatbob.gif"
+width=65></IMG>
+
+
+<IMG
+height=35
+src="assets/leafbob.gif"
+width=65></IMG>
+
+
+<BR>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/dcapman/espirits/ThanksgivingBob.html
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=86
+src="assets/tgbobcert2.gif"
+width=121></IMG>
+
+</A>
+
+
+<BR>
+
+
+<IMG
+height=35
+src="assets/leafbob3.gif"
+width=80></IMG>
+
+
+<IMG
+height=35
+src="assets/turkeybob.gif"
+width=65></IMG>
+
+
+<BR>
+
+
+<IMG
+height=10
+src="assets/r02-ln1.gif"
+width=321></IMG>
+
+
+<BR><BR>
+
+
+<IMG
+height=300
+src="assets/plaque3.gif"
+width=300></IMG>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/team28b/dorange/november/
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=150
+src="assets/naheartplaquecertificate.gif"
+width=150></IMG>
+
+</A>
+
+
+<BR>
+
+
+<IMG
+height=225
+src="assets/thanksgivinglimited2.gif"
+width=200></IMG>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/team28b/dorange/november/
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=200
+src="assets/nathanksangelcertificate.gif"
+width=200></IMG>
+
+</A>
+
+
+<BR>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/team28b/dorange/november/
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=200
+src="assets/nastampcertificate.gif"
+width=200></IMG>
+
+</A>
+
+
+<IMG
+height=194
+src="assets/tg5.gif"
+width=176></IMG>
+
+
+<BR><BR>
+
+
+<IMG
+height=10
+src="assets/r02-ln1.gif"
+width=321></IMG>
+
+
+<BR><BR>
+
+
+<IMG
+height=249
+src="assets/thanks_gift.jpg"
+width=230></IMG>
+
+
+<IMG
+height=225
+src="assets/dorangethanksgiving.gif"
+width=200></IMG>
+
+
+<BR>
+
+
+<IMG
+height=256
+src="assets/tgivingwombat.gif"
+width=206></IMG>
+
+
+<BR><BR>
+
+
+<FONT size=4>
+
+
+Thanks Moonlite Song for adopting this cutie for us!
+
+
+<BR>
+
+
+<IMG
+height=425
+src="assets/legendsgobbler.gif"
+width=425></IMG>
+
+
+<BR>
+
+
+<!-- Original Site Fights URL:
+http://www.thesitefights.com/team28b/dorange/november/
+-->
+
+<A href="/dfire/what-was-tsf/">
+
+<IMG
+height=150
+src="assets/nagobblercertificate.gif"
+width=150></IMG>
+
+</A>
+
+
+<BR><BR>
+
+
+<FONT face=Tinkertoy>
+
+<FONT size=4>
+
+
+Woe is me! I've been turned into a Thanksgiving Day Gobbler!
+
+
+<BR>
+
+
+<IMG
+height=235
+src="assets/spiritfire.gif"
+width=166></IMG>
+
+
+<BR>
+
+
+Alright! Thanks Fay Kitzjay for saving me from the crazy farmers hatchet! ROFL!
+
+
+<BR>
+
+
+<IMG
+height=145
+src="assets/escaped.gif"
+width=325></IMG>
+
+
+<BR><BR>
+
+
+<IMG
+height=174
+src="assets/sfirethanks.gif"
+width=204></IMG>
+
+
+<BR>
+
+
+<FONT face=Duchess>
+
+<FONT size=4>
+
+
+Thank you Spirit SiameseKitty! It's beautiful!
+
+
+<BR><BR>
+
+
+<IMG
+height=160
+src="assets/sc-thanx-card.gif"
+width=160></IMG>
+
+
+<BR>
+
+
+<IMG
+height=200
+src="assets/ddhornplenty.gif"
+width=375></IMG>
+
+
+<BR>
+
+
+<IMG
+height=234
+src="assets/dethanksgiving.gif"
+width=314></IMG>
+
+
+<BR>
+
+
+<IMG
+height=273
+src="assets/esspeedytg.gif"
+width=308></IMG>
+
+
+<BR>
+
+
+<IMG
+height=300
+src="assets/phcthanksgiv.gif"
+width=284></IMG>
+
+
+<BR>
+
+
+<IMG
+height=320
+src="assets/se_tkg.jpg"
+width=320></IMG>
+
+
+<BR><BR>
+
+
+<IMG
+height=10
+src="assets/r02-ln1.gif"
+width=321></IMG>
+
+
+<BR><BR>
+
+
+<!-- Original:
+http://www.sitefights.com/community/spirit/spiritfire/thanks.shtml
+-->
+
+<A href="/dfire/thanksgiving-01/">
+
+<IMG
+height=66
+src="assets/r02-bk.gif"
+width=116></IMG>
+
+</A>
+
+
+<!--
+Original Next destination:
+http://www.sitefights.com/community/spirit/spiritfire/christmas.shtml
+
+Christmas 2001 is not yet published, so this button is intentionally unlinked.
+-->
+
+<IMG
+height=66
+src="assets/r02-nx.gif"
+width=116></IMG>
+
+
+<!-- Original:
+http://www.sitefights.com/community/spirit/spiritfire/memorial.shtml
+-->
+
+<A href="/dfire/memorial/">
+
+<IMG
+height=66
+src="assets/r02-hm.gif"
+width=116></IMG>
+
+</A>
+
+
+<BR>
+
+
+<!-- Original empty event link:
+http://www.thesitefights.com/events/november
+-->
+
+
+<BR>
+
+
+<IMG
+height=10
+src="assets/r02-ln1.gif"
+width=321></IMG>
+
+
+<BR>
+
+
+<!-- Original external graphics-credit link:
+http://www.strenee.com/
+-->
+
+<IMG
+height=66
+src="assets/r02-logo.gif"
+width=116></IMG>
+
+
+</FONT>
+</FONT>
+</FONT>
+</FONT>
+</FONT>
+</FONT>
+</FONT>
+</FONT>
+
+
+</CENTER>
+
+</TD>
+
+</TR>
+
+</TBODY>
+
+</TABLE>
+
+
+<!--
+PRESERVATION NOTE - 2026
+
+Automatic MIDI playback from the original page is disabled.
+
+Original playback call:
+
+PlaySong("http://www.sitefights.com/community/spirit/spiritfire/midis/now-thank-we.mid")
+
+Historical MIDI filename:
+
+now-thank-we.mid
+-->
+
+
+<!--
+PRESERVATION NOTE - 2026
+
+Modern MP3 compatibility playback for the original page music.
+
+The original MIDI should remain preserved separately in:
+
+assets/midis/
+
+Autoplay is requested to reproduce the original page behavior.
+
+Modern browsers may block unmuted autoplay until the visitor first interacts
+with the page.
+-->
+
+
+<audio
+id="dfire-thanksgiving2-audio"
+autoplay
+loop
+preload="auto">
+
+<source
+src="assets/midis/now-thank-we.mp3"
+type="audio/mpeg">
+
+</audio>
+
+
+<script>
+
+(function () {
+
+  var audio = document.getElementById("dfire-thanksgiving2-audio");
+
+  if (!audio) return;
+
+
+  var attempt = audio.play();
+
+
+  if (attempt && typeof attempt.catch === "function") {
+
+    attempt.catch(function () {
+
+
+      function resumeAudio() {
+
+        audio.play().catch(function () {});
+
+
+        document.removeEventListener("click", resumeAudio);
+
+        document.removeEventListener("keydown", resumeAudio);
+
+        document.removeEventListener("touchstart", resumeAudio);
+
+      }
+
+
+      document.addEventListener(
+        "click",
+        resumeAudio,
+        { once: true }
+      );
+
+
+      document.addEventListener(
+        "keydown",
+        resumeAudio,
+        { once: true }
+      );
+
+
+      document.addEventListener(
+        "touchstart",
+        resumeAudio,
+        { once: true }
+      );
+
+
+    });
+
+  }
+
+})();
+
+</script>
+
+
+</CENTER>
+
+
+<!-- Original Site Fights/browser wrapper code removed in 2026 restoration. -->
+
+
+</CENTER>
+
+</BODY>
+
+</HTML>
